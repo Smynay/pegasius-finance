@@ -1,8 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./scss/_variables";
 @import "~bootstrap/scss/bootstrap";
-@import "./scss/variables";
 
 @import "./scss/button.scss";
+@import "./scss/card.scss";
 
 html,
 body {
@@ -15,6 +16,14 @@ body {
 
 .accent {
   color: $accent;
+}
+
+.dark {
+  color: $dark;
+}
+
+.light {
+  color: $light;
 }
 
 .wrapper {

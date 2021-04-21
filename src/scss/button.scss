@@ -4,6 +4,15 @@
   color: $lines;
 }
 
+@mixin flat($bg, $text) {
+  color: $text;
+  background: $bg;
+
+  &:hover {
+    @include outline($text, $bg);
+  }
+}
+
 .button {
   font-weight: 500;
   border: 1px solid transparent;
@@ -15,12 +24,11 @@
 
   &_flat {
     &-dark {
-      color: $light;
-      background: $dark;
+      @include flat($dark, $light);
+    }
 
-      &:hover {
-        @include outline($light, $dark);
-      }
+    &-blue {
+      @include flat($blue, $light);
     }
   }
 

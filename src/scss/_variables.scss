@@ -1,7 +1,28 @@
 // Breakpoints
 $sm: 290px;
-$md: 445px;
-$lg: 992px;
+$md: 450px;
+$lg: 1024px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: $sm,
+  md: $md,
+  lg: $lg,
+);
+
+$container-min-widths: (
+  xs: 0,
+  sm: $sm,
+  md: $md,
+  lg: $lg,
+);
+
+$container-max-widths: (
+  xs: $sm,
+  sm: $md,
+  md: $lg,
+  lg: 5000px,
+);
 
 // Colors
 $dark: #24126a;
