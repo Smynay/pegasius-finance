@@ -4,6 +4,7 @@
 
 @import "./scss/button.scss";
 @import "./scss/card.scss";
+@import "./scss/title.scss";
 
 html,
 body {
@@ -29,4 +30,24 @@ body {
 .wrapper {
   max-width: 1024px;
   margin: 0 auto;
+}
+
+.padding {
+  padding: 0px 25px;
+
+  @media screen and (min-width: $md) {
+    padding: 0px 32px;
+  }
+
+  @media screen and (min-width: $lg) {
+    padding: 0px 70px;
+  }
+
+  &-left {
+    padding-right: 0px;
+  }
+
+  &-right {
+    padding-left: 0px;
+  }
 }
