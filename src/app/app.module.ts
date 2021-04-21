@@ -11,6 +11,7 @@ import { HomeComponent } from "./views/home/home.component";
 import { MainSectionComponent } from "./sections/main-section/main-section.component";
 import { PoolsSectionComponent } from "./sections/pools-section/pools-section.component";
 import { SimpleCardComponent } from "./components/simple-card/simple-card.component";
+import { AboutSectionComponent } from './sections/about-section/about-section.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { SimpleCardComponent } from "./components/simple-card/simple-card.compon
     MainSectionComponent,
     PoolsSectionComponent,
     SimpleCardComponent,
+    AboutSectionComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, MaterialModule],
   providers: [],
