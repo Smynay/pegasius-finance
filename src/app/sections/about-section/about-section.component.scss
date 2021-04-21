@@ -37,15 +37,15 @@
   }
 
   .first {
-    @include image("../../../assets/images/decore/4.svg", left, 50% 100%);
+    @include image("../../../assets/images/content/4.svg", left, 50% 100%);
   }
 
   .second {
-    @include image("../../../assets/images/decore/5.svg", 120%, 50% 100%);
+    @include image("../../../assets/images/content/5.svg", 120%, 50% 100%);
 
     @media screen and (min-width: $md) {
       margin-top: -10%;
-      @include image("../../../assets/images/decore/5.svg", 90%, 40% 100%);
+      @include image("../../../assets/images/content/5.svg", 90%, 40% 100%);
     }
 
     @media screen and (min-width: $lg) {
@@ -54,7 +54,7 @@
   }
 
   .third {
-    @include image("../../../assets/images/decore/6.svg", 10%, 35% 100%);
+    @include image("../../../assets/images/content/6.svg", 10%, 35% 100%);
 
     @media screen and (min-width: $md) {
       margin-top: -10%;
