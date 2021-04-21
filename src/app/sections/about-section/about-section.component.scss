@@ -8,16 +8,6 @@
 }
 
 .about {
-  margin-top: 30px;
-
-  @media screen and (min-width: $md) {
-    margin-top: 50px;
-  }
-
-  @media screen and (min-width: $lg) {
-    margin-top: 100px;
-  }
-
   &__title {
     margin-bottom: 1rem;
   }
