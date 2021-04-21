@@ -1,0 +1,19 @@
+@import "src/scss/_variables";
+
+.pools {
+  padding: 0px 25px;
+
+  @media screen and (min-width: $md) {
+    padding: 0px 32px;
+  }
+
+  @media screen and (min-width: $lg) {
+    padding: 0px 70px;
+  }
+
+  &__cards {
+    .col {
+      margin-bottom: 2%;
+    }
+  }
+}

@@ -10,9 +10,17 @@ import { AppComponent } from "./app.component";
 import { HomeComponent } from "./views/home/home.component";
 import { MainSectionComponent } from "./sections/main-section/main-section.component";
 import { PoolsSectionComponent } from "./sections/pools-section/pools-section.component";
+import { SimpleCardComponent } from "./components/simple-card/simple-card.component";
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, HeaderComponent, MainSectionComponent, PoolsSectionComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    HeaderComponent,
+    MainSectionComponent,
+    PoolsSectionComponent,
+    SimpleCardComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, MaterialModule],
   providers: [],
   bootstrap: [AppComponent],

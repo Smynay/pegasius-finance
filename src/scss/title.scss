@@ -1,6 +1,11 @@
 .title {
   font-size: 18px;
   line-height: 21px;
+  color: $light;
+
+  &_dark {
+    color: $dark;
+  }
 
   @media screen and (min-width: $md) {
     font-size: 30px;
