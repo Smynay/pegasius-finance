@@ -13,6 +13,7 @@ import { PoolsSectionComponent } from "./sections/pools-section/pools-section.co
 import { SimpleCardComponent } from "./components/simple-card/simple-card.component";
 import { AboutSectionComponent } from "./sections/about-section/about-section.component";
 import { FeaturesSectionComponent } from "./sections/features-section/features-section.component";
+import { PartnersSectionComponent } from './sections/partners-section/partners-section.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { FeaturesSectionComponent } from "./sections/features-section/features-s
     SimpleCardComponent,
     AboutSectionComponent,
     FeaturesSectionComponent,
+    PartnersSectionComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, MaterialModule],
   providers: [],
