@@ -16,6 +16,7 @@ import { FeaturesSectionComponent } from "./sections/features-section/features-s
 import { PartnersSectionComponent } from "./sections/partners-section/partners-section.component";
 import { BlogSectionComponent } from "./sections/blog-section/blog-section.component";
 import { BlogCardComponent } from "./components/blog-card/blog-card.component";
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { BlogCardComponent } from "./components/blog-card/blog-card.component";
     PartnersSectionComponent,
     BlogSectionComponent,
     BlogCardComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, MaterialModule],
   providers: [],
