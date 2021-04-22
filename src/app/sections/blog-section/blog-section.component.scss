@@ -42,13 +42,6 @@
   }
 
   .decore {
-    position: absolute;
-    pointer-events: none;
-    z-index: 0;
-    background-image: url("../../../assets/images/decore/4.svg");
-    background-repeat: no-repeat;
-    background-position: contain;
-
     &_first {
       transform: rotate(180deg);
       height: 580px;
