@@ -4,19 +4,21 @@ import { BrowserModule } from "@angular/platform-browser";
 import { AppRoutingModule } from "./app-routing.module";
 import { MaterialModule } from "./modules/material/material.module";
 
-import { HeaderComponent } from "./components/header/header.component";
-
 import { AppComponent } from "./app.component";
+import { HeaderComponent } from "./components/home/header/header.component";
+import { BlogCardComponent } from "./components/home/blog-card/blog-card.component";
+import { FooterComponent } from "./components/home/footer/footer.component";
+import { SimpleCardComponent } from "./components/home/simple-card/simple-card.component";
+
 import { HomeComponent } from "./views/home/home.component";
+
 import { MainSectionComponent } from "./sections/main-section/main-section.component";
 import { PoolsSectionComponent } from "./sections/pools-section/pools-section.component";
-import { SimpleCardComponent } from "./components/simple-card/simple-card.component";
 import { AboutSectionComponent } from "./sections/about-section/about-section.component";
 import { FeaturesSectionComponent } from "./sections/features-section/features-section.component";
 import { PartnersSectionComponent } from "./sections/partners-section/partners-section.component";
 import { BlogSectionComponent } from "./sections/blog-section/blog-section.component";
-import { BlogCardComponent } from "./components/blog-card/blog-card.component";
-import { FooterComponent } from "./components/footer/footer.component";
+import { DashboardComponent } from './views/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { FooterComponent } from "./components/footer/footer.component";
     BlogSectionComponent,
     BlogCardComponent,
     FooterComponent,
+    DashboardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, MaterialModule],
   providers: [],
