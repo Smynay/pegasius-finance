@@ -1,4 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { MenuService } from "./../../services/menu.service";
+import { Component, EventEmitter, OnInit, Output } from "@angular/core";
 
 @Component({
   selector: "app-header",
@@ -9,7 +10,13 @@ export class HeaderComponent implements OnInit {
   logo = "assets/images/logo/logo.svg";
   logoText = "assets/images/logo/logo_text.svg";
 
-  constructor() {}
+  @Output() burgerClick = new EventEmitter();
+
+  constructor(public menuService: MenuService) {}
 
   ngOnInit(): void {}
+
+  emitBurgerClick() {
+    this.burgerClick.emit(null);
+  }
 }

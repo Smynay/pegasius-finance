@@ -1,3 +1,4 @@
+import { MenuService } from "./services/menu.service";
 import { Component } from "@angular/core";
 
 @Component({
@@ -7,4 +8,6 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   title = "pegasus-finance";
+
+  constructor(public menuService: MenuService) {}
 }
