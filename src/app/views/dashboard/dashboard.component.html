@@ -13,7 +13,10 @@
 
   <div class="drawer-sidenav-content">
     <app-dashboard-header class="w-100" (burgerClick)="drawer.toggle()"></app-dashboard-header>
-    <main></main>
+    <main>
+      <app-total-value-section></app-total-value-section>
+      <app-potfolio-section></app-potfolio-section>
+    </main>
     <app-footer></app-footer>
   </div>
 </mat-drawer-container>

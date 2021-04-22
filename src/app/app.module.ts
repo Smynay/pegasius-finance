@@ -14,6 +14,9 @@ import { DashboardHeaderComponent } from "./components/dashboard/header/header.c
 
 import { HomeComponent } from "./views/home/home.component";
 import { DashboardComponent } from "./views/dashboard/dashboard.component";
+import { ChartComponent } from "./components/dashboard/chart/chart.component";
+import { PortfolioComponent } from "./components/dashboard/portfolio/portfolio.component";
+import { PotfolioSectionComponent } from "./sections/potfolio-section/potfolio-section.component";
 
 import { MainSectionComponent } from "./sections/main-section/main-section.component";
 import { PoolsSectionComponent } from "./sections/pools-section/pools-section.component";
@@ -21,6 +24,7 @@ import { AboutSectionComponent } from "./sections/about-section/about-section.co
 import { FeaturesSectionComponent } from "./sections/features-section/features-section.component";
 import { PartnersSectionComponent } from "./sections/partners-section/partners-section.component";
 import { BlogSectionComponent } from "./sections/blog-section/blog-section.component";
+import { TotalValueSectionComponent } from "./sections/total-value-section/total-value-section.component";
 
 @NgModule({
   declarations: [
@@ -38,6 +42,10 @@ import { BlogSectionComponent } from "./sections/blog-section/blog-section.compo
     FooterComponent,
     DashboardComponent,
     DashboardHeaderComponent,
+    TotalValueSectionComponent,
+    ChartComponent,
+    PortfolioComponent,
+    PotfolioSectionComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, MaterialModule],
   providers: [],

@@ -1,0 +1,28 @@
+@import "src/scss/_variables";
+
+.portfolio {
+  background: $grey;
+
+  &__devider {
+    border-left: 1px solid rgba($dark, 0.33);
+    padding: 1rem 0;
+  }
+
+  &__panel {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    hr {
+      color: $dark;
+      height: 1px;
+      width: 100%;
+      margin: 0.5rem;
+    }
+  }
+}
