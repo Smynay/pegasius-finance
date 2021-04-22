@@ -15,7 +15,6 @@ export class SimpleCardComponent implements OnInit {
 
   constructor() {
     this.tokenIco = this.poolInfo?.tokenIco;
-    console.log(this.decoreImg);
   }
 
   ngOnInit(): void {
