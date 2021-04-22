@@ -27,6 +27,13 @@
     line-height: 36px;
   }
 
+  &_link {
+    &:hover {
+      text-decoration: underline 2px;
+      color: $dark;
+    }
+  }
+
   &_flat {
     &-dark {
       @include flat($dark, $light);

@@ -4,8 +4,9 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
+import { MatSelectModule } from "@angular/material/select";
 
-const materialModules = [BrowserAnimationsModule, MatButtonModule, MatSidenavModule, MatIconModule];
+const materialModules = [BrowserAnimationsModule, MatButtonModule, MatSidenavModule, MatIconModule, MatSelectModule];
 
 @NgModule({
   declarations: [],

@@ -10,7 +10,10 @@ import { BlogCardComponent } from "./components/home/blog-card/blog-card.compone
 import { FooterComponent } from "./components/home/footer/footer.component";
 import { SimpleCardComponent } from "./components/home/simple-card/simple-card.component";
 
+import { DashboardHeaderComponent } from "./components/dashboard/header/header.component";
+
 import { HomeComponent } from "./views/home/home.component";
+import { DashboardComponent } from "./views/dashboard/dashboard.component";
 
 import { MainSectionComponent } from "./sections/main-section/main-section.component";
 import { PoolsSectionComponent } from "./sections/pools-section/pools-section.component";
@@ -18,7 +21,6 @@ import { AboutSectionComponent } from "./sections/about-section/about-section.co
 import { FeaturesSectionComponent } from "./sections/features-section/features-section.component";
 import { PartnersSectionComponent } from "./sections/partners-section/partners-section.component";
 import { BlogSectionComponent } from "./sections/blog-section/blog-section.component";
-import { DashboardComponent } from './views/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
     BlogCardComponent,
     FooterComponent,
     DashboardComponent,
+    DashboardHeaderComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, MaterialModule],
   providers: [],
