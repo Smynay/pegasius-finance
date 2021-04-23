@@ -78,7 +78,7 @@ export class ChartComponent implements OnInit {
           },
           {
             data: [282, 350, 411, 502, 400, 371, 586, 320, 201, 170],
-            label: "Asia",
+            label: "USDC",
             borderColor: "#24126A",
             backgroundColor: "#24126A",
             tension: 0.4,
