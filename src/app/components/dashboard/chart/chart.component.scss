@@ -5,6 +5,15 @@
 
   &__content {
     min-width: 360px;
-    min-height: 160px;
+    min-height: 180px;
+    height: 100%;
+
+    @media screen and (min-width: $lg) {
+      min-height: 200px;
+    }
+
+    @media screen and (min-width: $lg) {
+      min-height: 260px;
+    }
   }
 }

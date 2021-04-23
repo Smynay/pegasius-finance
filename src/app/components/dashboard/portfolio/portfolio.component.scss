@@ -10,11 +10,31 @@
     }
   }
 
+  &__chart {
+    max-height: 121px;
+    max-width: 121px;
+
+    @media screen and (min-width: $md) {
+      max-height: 175px;
+      max-width: 175px;
+    }
+  }
+
   &__panel {
     display: flex;
     justify-content: space-between;
-    font-size: 12px;
+    font-size: 10px;
     line-height: 33px;
+
+    @media screen and (max-width: $md) {
+      padding-left: 0.8rem;
+      padding-right: 0.8rem;
+    }
+
+    @media screen and (min-width: $md) {
+      font-size: 12px;
+      line-height: 47px;
+    }
 
     @media screen and (min-width: $lg) {
       font-size: 19px;

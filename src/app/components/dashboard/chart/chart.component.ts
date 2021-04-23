@@ -69,7 +69,7 @@ export class ChartComponent implements OnInit {
         labels: ["May", "Jul", "Jun", "Aug", "Sept", "Nov", "Dec"],
         datasets: [
           {
-            data: [500, 200, 245, 105, 304, 180, 279, 221, 450, 300],
+            data: [500, 200, 245, 105, 304, 180, 279, 221, 450, 300, 1000],
             label: "WBTC",
             borderColor: "#007EAF",
             backgroundColor: "#007EAF",

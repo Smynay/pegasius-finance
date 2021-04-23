@@ -12,20 +12,12 @@ export class PortfolioComponent implements OnInit {
   NUMBER_CFG = { count: this.DATA_COUNT, min: 0, max: 100 };
 
   chartData = {
-    labels: ["Red", "Orange", "Yellow", "Green", "Blue"],
+    labels: ["WBTC", "USDC"],
     datasets: [
       {
         label: "Dataset 1",
-        data: [10, 20, 50, 20],
-        backgroundColor: Object.values({
-          red: "rgb(255, 99, 132)",
-          orange: "rgb(255, 159, 64)",
-          yellow: "rgb(255, 205, 86)",
-          green: "rgb(75, 192, 192)",
-          blue: "rgb(54, 162, 235)",
-          purple: "rgb(153, 102, 255)",
-          grey: "rgb(201, 203, 207)",
-        }),
+        data: [30, 70],
+        backgroundColor: ["#007EAF", "#24126A"],
         tension: 0.4,
       },
     ],
@@ -38,10 +30,11 @@ export class PortfolioComponent implements OnInit {
       responsive: true,
       plugins: {
         legend: {
+          display: false,
           position: "top",
         },
         title: {
-          display: true,
+          display: false,
           text: "Chart.js Pie Chart",
         },
       },
