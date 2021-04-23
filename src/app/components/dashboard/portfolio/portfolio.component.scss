@@ -15,7 +15,9 @@
     margin-bottom: 1rem;
 
     &:last-child {
-      margin-bottom: 0;
+      @media screen and (min-width: $lg) {
+        margin-bottom: 0;
+      }
     }
 
     hr {
