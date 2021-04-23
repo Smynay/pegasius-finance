@@ -4,13 +4,22 @@
   background: $grey;
 
   &__devider {
-    border-left: 1px solid rgba($dark, 0.33);
-    padding: 1rem 0;
+    @media screen and (min-width: $lg) {
+      border-left: 1px solid rgba($dark, 0.33);
+      padding: 1rem 0;
+    }
   }
 
   &__panel {
     display: flex;
     justify-content: space-between;
+    font-size: 12px;
+    line-height: 33px;
+
+    @media screen and (min-width: $lg) {
+      font-size: 19px;
+      line-height: 47px;
+    }
 
     margin-bottom: 1rem;
 
@@ -25,6 +34,12 @@
       height: 1px;
       width: 100%;
       margin: 0.5rem;
+    }
+
+    &.sepical {
+      @media screen and (min-width: $lg) {
+        line-height: 24px;
+      }
     }
   }
 }
