@@ -12,12 +12,21 @@
   </mat-drawer>
 
   <div class="drawer-sidenav-content d-flex flex-column">
-    <app-dashboard-header class="w-100" (burgerClick)="drawer.toggle()"></app-dashboard-header>
+    <app-dashboard-header class="w-100 upper" (burgerClick)="drawer.toggle()"></app-dashboard-header>
     <main class="flex-grow-1 flex-shrink-1">
-      <app-total-value-section></app-total-value-section>
-      <app-potfolio-section></app-potfolio-section>
-      <app-pools-dashboard-section></app-pools-dashboard-section>
+      <div class="content__wrapper overflow-hidden">
+        <div class="content">
+          <app-total-value-section></app-total-value-section>
+          <app-potfolio-section></app-potfolio-section>
+          <app-pools-dashboard-section></app-pools-dashboard-section>
+        </div>
+
+        <div class="decorations">
+          <div class="decore decore_first"></div>
+          <div class="decore decore_second"></div>
+        </div>
+      </div>
     </main>
-    <app-footer apperance="dark"></app-footer>
+    <app-footer apperance="dark" class="upper"></app-footer>
   </div>
 </mat-drawer-container>

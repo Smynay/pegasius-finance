@@ -74,10 +74,15 @@ body {
 }
 
 .decore {
+  display: none;
   position: absolute;
   pointer-events: none;
   z-index: 0;
   background-image: url("assets/images/decore/4.svg");
   background-repeat: no-repeat;
   background-position: contain;
+
+  @media screen and (min-width: $lg) {
+    display: block;
+  }
 }

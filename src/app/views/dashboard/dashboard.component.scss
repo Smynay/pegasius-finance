@@ -32,3 +32,37 @@
     }
   }
 }
+
+.content,
+.upper {
+  position: relative;
+  z-index: 2;
+}
+
+.decorations {
+  z-index: 1;
+
+  .decore {
+    z-index: 0;
+    opacity: 0.66;
+
+    &_first {
+      transform: rotate(180deg);
+      height: 580px;
+      width: 1072px;
+      left: 50%;
+      margin-left: -1100px;
+      top: -6%;
+    }
+
+    &_second {
+      left: 50%;
+      top: 670px;
+      height: 580px;
+      object-fit: contain;
+      overflow: hidden;
+      width: 1072px;
+      margin-left: -10px;
+    }
+  }
+}
