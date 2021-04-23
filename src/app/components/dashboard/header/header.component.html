@@ -4,7 +4,7 @@
       <img [src]="logo" class="logo" alt="Company logo" />
       <img [src]="logoText" class="logo-text d-none d-lg-block" alt="Company logo text" />
     </div>
-    <select class="form-select form-select-sm ml-4 d-none d-lg-block">
+    <select class="form-select custom-select form-select-sm ml-4 d-none d-lg-block">
       <option *ngFor="let lang of languages; let i = index" [value]="lang.locale" [selected]="i == 0">
         {{ lang.title }}
       </option>
