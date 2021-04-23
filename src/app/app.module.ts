@@ -9,14 +9,14 @@ import { HeaderComponent } from "./components/home/header/header.component";
 import { BlogCardComponent } from "./components/home/blog-card/blog-card.component";
 import { FooterComponent } from "./components/home/footer/footer.component";
 import { SimpleCardComponent } from "./components/home/simple-card/simple-card.component";
-
 import { DashboardHeaderComponent } from "./components/dashboard/header/header.component";
-
-import { HomeComponent } from "./views/home/home.component";
-import { DashboardComponent } from "./views/dashboard/dashboard.component";
 import { ChartComponent } from "./components/dashboard/chart/chart.component";
 import { PortfolioComponent } from "./components/dashboard/portfolio/portfolio.component";
 import { PotfolioSectionComponent } from "./sections/potfolio-section/potfolio-section.component";
+import { CardComponent } from "./components/dashboard/card/card.component";
+
+import { HomeComponent } from "./views/home/home.component";
+import { DashboardComponent } from "./views/dashboard/dashboard.component";
 
 import { MainSectionComponent } from "./sections/main-section/main-section.component";
 import { PoolsSectionComponent } from "./sections/pools-section/pools-section.component";
@@ -25,6 +25,7 @@ import { FeaturesSectionComponent } from "./sections/features-section/features-s
 import { PartnersSectionComponent } from "./sections/partners-section/partners-section.component";
 import { BlogSectionComponent } from "./sections/blog-section/blog-section.component";
 import { TotalValueSectionComponent } from "./sections/total-value-section/total-value-section.component";
+import { PoolsDashboardSectionComponent } from "./sections/pools-dashboard-section/pools-dashboard-section.component";
 
 @NgModule({
   declarations: [
@@ -46,6 +47,8 @@ import { TotalValueSectionComponent } from "./sections/total-value-section/total
     ChartComponent,
     PortfolioComponent,
     PotfolioSectionComponent,
+    PoolsDashboardSectionComponent,
+    CardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, MaterialModule],
   providers: [],

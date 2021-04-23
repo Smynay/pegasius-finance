@@ -1,7 +1,13 @@
 @import "src/scss/_variables";
 
 .footer {
-  background: $blue;
+  &.blue {
+    background: $blue;
+  }
+
+  &.dark {
+    background: $dark;
+  }
 
   &__wrapper {
     display: flex;

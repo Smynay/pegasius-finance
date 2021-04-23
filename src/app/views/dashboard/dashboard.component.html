@@ -11,12 +11,13 @@
     </div>
   </mat-drawer>
 
-  <div class="drawer-sidenav-content">
+  <div class="drawer-sidenav-content d-flex flex-column">
     <app-dashboard-header class="w-100" (burgerClick)="drawer.toggle()"></app-dashboard-header>
-    <main>
+    <main class="flex-grow-1 flex-shrink-1">
       <app-total-value-section></app-total-value-section>
       <app-potfolio-section></app-potfolio-section>
+      <app-pools-dashboard-section></app-pools-dashboard-section>
     </main>
-    <app-footer></app-footer>
+    <app-footer apperance="dark"></app-footer>
   </div>
 </mat-drawer-container>
