@@ -17,6 +17,7 @@ import { CardComponent } from "./components/dashboard/card/card.component";
 
 import { HomeComponent } from "./views/home/home.component";
 import { DashboardComponent } from "./views/dashboard/dashboard.component";
+import { AccountComponent } from './views/account/account.component';
 
 import { MainSectionComponent } from "./sections/main-section/main-section.component";
 import { PoolsSectionComponent } from "./sections/pools-section/pools-section.component";
@@ -49,6 +50,7 @@ import { PoolsDashboardSectionComponent } from "./sections/pools-dashboard-secti
     PotfolioSectionComponent,
     PoolsDashboardSectionComponent,
     CardComponent,
+    AccountComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, MaterialModule],
   providers: [],
