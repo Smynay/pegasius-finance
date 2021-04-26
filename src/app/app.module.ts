@@ -15,6 +15,7 @@ import { PortfolioComponent } from "./components/dashboard/portfolio/portfolio.c
 import { PotfolioSectionComponent } from "./sections/potfolio-section/potfolio-section.component";
 import { CardComponent } from "./components/dashboard/card/card.component";
 import { PoolCardComponent} from "./components/pool/card/card.component";
+import { ActionFormComponent } from './components/pool/action-form/action-form.component';
 
 import { HomeComponent } from "./views/home/home.component";
 import { DashboardComponent } from "./views/dashboard/dashboard.component";
@@ -29,7 +30,7 @@ import { BlogSectionComponent } from "./sections/blog-section/blog-section.compo
 import { TotalValueSectionComponent } from "./sections/total-value-section/total-value-section.component";
 import { PoolsDashboardSectionComponent } from "./sections/pools-dashboard-section/pools-dashboard-section.component";
 import { PoolFormComponent } from './sections/pool-form/pool-form.component';
-import { ActionFormComponent } from './components/pool/action-form/action-form.component';
+import { AltcoinsSectionComponent } from './sections/altcoins-section/altcoins-section.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { ActionFormComponent } from './components/pool/action-form/action-form.c
     PoolComponent,
     PoolFormComponent,
     ActionFormComponent,
+    AltcoinsSectionComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, MaterialModule],
   providers: [],

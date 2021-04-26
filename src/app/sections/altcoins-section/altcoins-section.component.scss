@@ -1,0 +1,52 @@
+@import "src/scss/_variables";
+
+.altcoins {
+  &__wrapper {
+    overflow-x: auto;
+  }
+
+  .table {
+
+    &__head {
+      vertical-align: middle;
+    }
+
+    &__ico {
+      width: 12px;
+
+      @media screen and (min-width: $lg) {
+        width: 20px;
+      }
+    }
+
+
+    th, td {
+      padding: 5px;
+      vertical-align: middle;
+    }
+
+    th {
+      border: 1px solid rgba($dark, 0.33);
+      border-right: none;
+      border-left: none;
+      font-weight: normal;
+      font-size: 10px;
+      line-height: 10px;
+
+      @media screen and (min-width: $lg) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    td {
+      border-bottom: 1px solid #24126A;
+      font-size: 12px;
+      line-height: 24px;
+
+      @media screen and (min-width: $lg) {
+        font-size: 19px;
+      }
+    }
+  }
+}
