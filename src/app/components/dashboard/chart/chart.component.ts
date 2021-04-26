@@ -103,7 +103,12 @@ export class ChartComponent implements OnInit {
               padding: 35,
               boxWidth: 16,
               boxHeight: 16,
-            },
+              color: "#24126A",
+              font: {
+                family: "'Helvetica'",
+                size: 16,
+              }
+            }
           },
         },
       },
