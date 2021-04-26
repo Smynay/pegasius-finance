@@ -5,10 +5,10 @@ import { Injectable } from "@angular/core";
 })
 export class MenuService {
   homeMenu = [
-    { title: "POOLS", path: "#" },
-    { title: "ABOUT", path: "#" },
-    { title: "PARTNERS", path: "#" },
-    { title: "BLOG", path: "#" },
+    { title: "POOLS", path: "/dashboard" },
+    { title: "ABOUT", path: "#about" },
+    { title: "PARTNERS", path: "#partners" },
+    { title: "BLOG", path: "#blog" },
   ];
 
   dashboardMenu = [

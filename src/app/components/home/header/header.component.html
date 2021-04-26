@@ -4,7 +4,7 @@
     <img [src]="logoText" class="logo-text d-none d-lg-block" alt="Company logo text" />
   </div>
   <ul class="header__menu d-none d-lg-flex">
-    <li *ngFor="let item of menuService.homeMenu">{{ item.title }}</li>
+    <li *ngFor="let item of menuService.homeMenu" [routerLink]="item.path">{{ item.title }}</li>
   </ul>
   <div class="header__addition">
     <button class="button button_flat-dark d-none d-lg-block">OPEN APP</button>

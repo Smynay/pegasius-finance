@@ -3,6 +3,10 @@
   line-height: 21px;
   color: $light;
 
+  &:focus {
+    outline: none;
+  }
+
   &_dashboard {
     font-size: 18px;
     line-height: 30px;
