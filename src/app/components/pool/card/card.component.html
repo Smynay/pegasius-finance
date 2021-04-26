@@ -1,0 +1,31 @@
+<div class="card">
+  <div class="card__header padding">
+    <div class="card__token p-0">
+      <div class="token__wrapper token justify-content-end d-md-flex">
+        <p class="font-weight-bold dark">WBTC</p>
+        <br class="d-block d-md-none">
+        <img [src]="tokenIco" alt="Token icon" />
+      </div>
+    </div>
+    <div class="row p-0 m-0">
+      <div class="col-12 row p-0 m-0">
+        <div class="col-4 mb-1 m-lg-0 px-0 d-block d-lg-flex gap">
+          <p class="card__text mb-2 mb-lg-0 blue">Current APY: <br /><span class="count dark">0.96%</span></p>
+          <p class="card__text blue m-0">APY (300 Avg.): <br /><span class="count dark">0.5%</span></p>
+        </div>
+        <div class="col-8 px-0 d-block d-lg-flex gap">
+          <p class="card__text mb-2 m-lg-0 blue">My balance now: <br /><span class="count dark">$300 (42 DAI)</span></p>
+          <p class="card__text blue m-0">
+            TVL: <br /><span class="count dark">$30,000 (20012 DAI)</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card__body">
+    <div class="body__wrapper padding d-flex flex-column flex-lg-row justify-content-center">
+      <app-action-form title="Deposit"></app-action-form>
+      <app-action-form title="Withdraw"></app-action-form>
+    </div>
+  </div>
+</div>
