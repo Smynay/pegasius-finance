@@ -12,25 +12,11 @@
         </tr>
       </thead>
       <tbody class="dark">
-        <tr>
+        <tr *ngFor="let coin of altcoinsInfo">
           <td><img class="table__ico" [src]="tokenIco" alt="Token icon" /></td>
-          <td class="font-weight-bold">USDC</td>
-          <td>0.75%</td>
-          <td>0.3%</td>
-          <td>$300 (42 DAI)</td>
-        </tr>
-        <tr>
-          <td><img class="table__ico" [src]="tokenIco" alt="Token icon" /></td>
-          <td class="font-weight-bold">USDC</td>
-          <td>0.75%</td>
-          <td>0.3%</td>
-          <td>$300 (42 DAI)</td>
-        </tr>
-        <tr>
-          <td><img class="table__ico" [src]="tokenIco" alt="Token icon" /></td>
-          <td class="font-weight-bold">USDC</td>
-          <td>0.75%</td>
-          <td>0.3%</td>
+          <td class="font-weight-bold">{{ coin.pool }}</td>
+          <td>{{ coin.sharePrice.toFixed(2) }}%</td>
+          <td>{{ (coin.shares / 10000).toFixed(1) }}%</td>
           <td>$300 (42 DAI)</td>
         </tr>
       </tbody>
