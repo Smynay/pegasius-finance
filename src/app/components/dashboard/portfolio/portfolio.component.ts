@@ -1,3 +1,4 @@
+import { BalanceService } from "./../../../services/api/balance.service";
 import { Component, OnInit } from "@angular/core";
 import { Chart, ChartConfiguration, ChartItem, registerables } from "chart.js";
 Chart.register(...registerables);
@@ -8,46 +9,46 @@ Chart.register(...registerables);
   styleUrls: ["./portfolio.component.scss"],
 })
 export class PortfolioComponent implements OnInit {
-  DATA_COUNT = 5;
-  NUMBER_CFG = { count: this.DATA_COUNT, min: 0, max: 100 };
-
-  chartData = {
-    labels: ["WBTC", "USDC"],
-    datasets: [
-      {
-        label: "Dataset 1",
-        data: [30, 70],
-        backgroundColor: ["#007EAF", "#24126A"],
-        tension: 0.4,
-      },
-    ],
-  };
-
-  config = {
-    type: "pie",
-    data: this.chartData,
-    options: {
-      responsive: true,
-      plugins: {
-        legend: {
-          display: false,
-          position: "top",
-        },
-        title: {
-          display: false,
-          text: "Chart.js Pie Chart",
-        },
-      },
-    },
-  };
-
   myChart;
+  userBalance: any;
 
-  constructor() {}
+  constructor(private balanceService: BalanceService) {}
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
+    this.userBalance = await this.balanceService.getAll();
+
+    const chartData = {
+      labels: this.userBalance.map((e) => e.symbol),
+      datasets: [
+        {
+          label: "Dataset 1",
+          data: this.userBalance.map((e) => e.percentage),
+          backgroundColor: ["#007EAF", "#24126A"],
+          tension: 0.4,
+        },
+      ],
+    };
+
+    const config = {
+      type: "pie",
+      data: chartData,
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false,
+            position: "top",
+          },
+          title: {
+            display: false,
+            text: "Chart.js Pie Chart",
+          },
+        },
+      },
+    };
+
     const ctx = document.getElementById("myPie") as ChartItem;
 
-    this.myChart = new Chart(ctx, this.config as ChartConfiguration);
+    this.myChart = new Chart(ctx, config as ChartConfiguration);
   }
 }

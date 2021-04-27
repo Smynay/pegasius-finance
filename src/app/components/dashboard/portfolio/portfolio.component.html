@@ -7,14 +7,14 @@
     </div>
     <div class="col-12 col-md-8">
       <div class="portfolio__devider row">
-        <div class="col-12 col-lg-7">
+        <div class="col-12 col-lg-7" *ngIf="userBalance">
           <div class="portfolio__panel panel panel_blue">
-            <span>WBTC</span>
-            <span>30% (3000 USD)</span>
+            <span>{{ userBalance[0].symbol }}</span>
+            <span>{{ userBalance[0].percentage }}% (3000 USD)</span>
           </div>
           <div class="portfolio__panel panel panel_dark">
-            <span>USDC</span>
-            <span>70% (7000 USD)</span>
+            <span>{{ userBalance[1].symbol }}</span>
+            <span>{{ userBalance[1].percentage }}% (7000 USD)</span>
           </div>
         </div>
         <div class="col-12 col-lg-5">
