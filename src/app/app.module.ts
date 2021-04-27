@@ -14,12 +14,12 @@ import { ChartComponent } from "./components/dashboard/chart/chart.component";
 import { PortfolioComponent } from "./components/dashboard/portfolio/portfolio.component";
 import { PotfolioSectionComponent } from "./sections/potfolio-section/potfolio-section.component";
 import { CardComponent } from "./components/dashboard/card/card.component";
-import { PoolCardComponent} from "./components/pool/card/card.component";
-import { ActionFormComponent } from './components/pool/action-form/action-form.component';
+import { PoolCardComponent } from "./components/pool/card/card.component";
+import { ActionFormComponent } from "./components/pool/action-form/action-form.component";
 
 import { HomeComponent } from "./views/home/home.component";
 import { DashboardComponent } from "./views/dashboard/dashboard.component";
-import { PoolComponent } from './views/pool/pool.component';
+import { PoolComponent } from "./views/pool/pool.component";
 
 import { MainSectionComponent } from "./sections/main-section/main-section.component";
 import { PoolsSectionComponent } from "./sections/pools-section/pools-section.component";
@@ -29,8 +29,8 @@ import { PartnersSectionComponent } from "./sections/partners-section/partners-s
 import { BlogSectionComponent } from "./sections/blog-section/blog-section.component";
 import { TotalValueSectionComponent } from "./sections/total-value-section/total-value-section.component";
 import { PoolsDashboardSectionComponent } from "./sections/pools-dashboard-section/pools-dashboard-section.component";
-import { PoolFormComponent } from './sections/pool-form/pool-form.component';
-import { AltcoinsSectionComponent } from './sections/altcoins-section/altcoins-section.component';
+import { PoolFormComponent } from "./sections/pool-form/pool-form.component";
+import { AltcoinsSectionComponent } from "./sections/altcoins-section/altcoins-section.component";
 
 @NgModule({
   declarations: [
