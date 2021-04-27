@@ -11,51 +11,51 @@ export class TvlHistoryService {
       ETH: [
         {
           timestamp: 1619388000,
-          tvl: 674,
+          tvl: 700000,
         },
         {
           timestamp: 1619344800,
-          tvl: 684,
+          tvl: 500000,
         },
         {
           timestamp: 1619301600,
-          tvl: 685,
+          tvl: 500000,
         },
         {
           timestamp: 1619258400,
-          tvl: 756,
+          tvl: 700000,
         },
         {
           timestamp: 1619215200,
-          tvl: 795,
+          tvl: 800000,
         },
         {
           timestamp: 1619344800,
-          tvl: 853,
+          tvl: 700000,
         },
         {
           timestamp: 1619172000,
-          tvl: 835,
+          tvl: 700000,
         },
         {
           timestamp: 1619128800,
-          tvl: 841,
+          tvl: 870000,
         },
         {
           timestamp: 1619085600,
-          tvl: 867,
+          tvl: 870000,
         },
         {
           timestamp: 1619042400,
-          tvl: 823,
+          tvl: 870000,
         },
         {
           timestamp: 1618999200,
-          tvl: 745,
+          tvl: 900000,
         },
         {
           timestamp: 1618956000,
-          tvl: 786,
+          tvl: 870000,
         },
       ],
       USDC: [
@@ -101,7 +101,7 @@ export class TvlHistoryService {
         },
         {
           timestamp: 1618999200,
-          tvl: 853000,
+          tvl: 600000,
         },
         {
           timestamp: 1618956000,
