@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from "@angular/core";
+import { Pool } from "src/app/models/pool";
 
 @Component({
   selector: "app-card",
@@ -6,12 +7,12 @@ import { Component, Input, OnInit } from "@angular/core";
   styleUrls: ["./card.component.scss"],
 })
 export class CardComponent implements OnInit {
-  @Input() poolInfo = { tokenIco: "assets/images/tokens/BTC.svg" };
+  @Input() poolInfo: Pool;
 
   tokenIco: string;
 
   constructor() {
-    this.tokenIco = this.poolInfo?.tokenIco;
+    this.tokenIco = "assets/images/tokens/BTC.svg";
   }
 
   ngOnInit(): void {}
