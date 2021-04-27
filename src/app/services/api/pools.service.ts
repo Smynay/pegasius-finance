@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { Pool } from "src/app/models/pool";
 
 @Injectable({
   providedIn: "root",
@@ -28,6 +29,6 @@ export class PoolsService {
       ],
     };
 
-    return response.pools;
+    return response.pools as Pool[];
   }
 }
