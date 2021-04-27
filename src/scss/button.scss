@@ -1,0 +1,63 @@
+@mixin outline($bg, $lines) {
+  background: $bg;
+  border: 1px solid $lines;
+  color: $lines;
+}
+
+@mixin flat($bg, $text) {
+  color: $text;
+  background: $bg;
+
+  &:hover {
+    @include outline($text, $bg);
+  }
+}
+
+.button {
+  font-weight: 500;
+  border: 1px solid transparent;
+  font-size: 12px;
+  line-height: 28px;
+  padding: 0px 16px;
+  min-width: 60px;
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.33));
+  border-radius: 10px;
+
+  @media screen and (min-width: $lg) {
+    line-height: 36px;
+  }
+
+  &_flat {
+    &-dark {
+      @include flat($dark, $light);
+    }
+
+    &-blue {
+      @include flat($blue, $light);
+    }
+
+    &-light {
+      @include flat($light, $dark);
+    }
+  }
+
+  &_rounded {
+    padding: 0px 14px;
+    line-height: 29px;
+    border-radius: 19px;
+  }
+
+  &_outline {
+    &-dark {
+      @include outline($light, $dark);
+    }
+
+    &-blue {
+      @include outline($light, $blue);
+    }
+
+    &-invert {
+      @include outline($dark, $light);
+    }
+  }
+}

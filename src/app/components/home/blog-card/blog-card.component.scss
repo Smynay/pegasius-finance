@@ -1,0 +1,59 @@
+@import "src/scss/_variables";
+
+.blog-card {
+  cursor: pointer;
+  z-index: 1;
+
+  &__cover {
+    position: relative;
+    border-radius: 19px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+
+    .cover__text {
+      position: absolute;
+      color: $light;
+      width: 100%;
+      height: 100%;
+      left: 0px;
+      top: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media screen and (min-width: $md) {
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      @media screen and (min-width: $lg) {
+        font-size: 36px;
+        line-height: 24px;
+      }
+
+      &:hover {
+        background: rgba($color: #fff, $alpha: 0.8);
+        color: $dark;
+      }
+    }
+  }
+
+  p {
+    padding: 18px;
+    padding-bottom: 0px;
+    font-size: 16px;
+    line-height: 24px;
+
+    @media screen and (min-width: $lg) {
+      font-size: 28px;
+      line-height: 34px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
