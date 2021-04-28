@@ -10,19 +10,31 @@ Chart.register(...registerables);
 })
 export class PortfolioComponent implements OnInit {
   myChart;
-  userBalance: any;
+  userPortfolio?: any = null;
+  dataToView: any;
 
   constructor(private balanceService: BalanceService) {}
 
   async ngOnInit(): Promise<void> {
-    this.userBalance = await this.balanceService.getAll();
+    const userBalance = await this.balanceService.getAll();
+
+    const generalCount = userBalance.reduce((sum, e) => e.shares + sum, 0);
+    const datasetData = userBalance.map((e) => ((e.shares / generalCount) * 100).toFixed(1));
+    const fullPrices = userBalance.map((e) => (e.shares * e.sharePrice).toFixed(2));
+
+    this.userPortfolio = userBalance.map((e, index) => ({
+      ...e,
+      percentage: datasetData[index],
+      fullPrice: fullPrices[index],
+      generalCount,
+    }));
 
     const chartData = {
-      labels: this.userBalance.map((e) => e.symbol),
+      labels: userBalance.map((e) => e.pool),
       datasets: [
         {
           label: "Dataset 1",
-          data: this.userBalance.map((e) => e.percentage),
+          data: datasetData,
           backgroundColor: ["#007EAF", "#24126A"],
           tension: 0.4,
         },
@@ -49,6 +61,6 @@ export class PortfolioComponent implements OnInit {
 
     const ctx = document.getElementById("myPie") as ChartItem;
 
-    this.myChart = new Chart(ctx, config as ChartConfiguration);
+    this.myChart = new Chart(ctx, config as any);
   }
 }
