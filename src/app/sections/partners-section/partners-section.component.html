@@ -3,7 +3,7 @@
   <div class="partners__block row d-none d-lg-flex">
     <div class="col-4 block__image d-flex align-items-center justify-content-center" *ngFor="let part of partners">
       <a [href]="part.link" target="_blank" rel="noopener noreferrer"
-        ><img [src]="part.darkImg" [alt]="part.name + 'logotype'"
+        ><img [src]="part.darkImg" [alt]="part.name + ' logotype'"
       /></a>
     </div>
   </div>
@@ -11,7 +11,7 @@
   <div class="partners__block row d-block d-lg-none">
     <div class="col-12 block__image d-flex align-items-center justify-content-center" *ngFor="let part of partners">
       <a [href]="part.link" target="_blank" rel="noopener noreferrer"
-        ><img [src]="part.lightImg" [alt]="part.name + 'logotype'"
+        ><img [src]="part.lightImg" [alt]="part.name + ' logotype'"
       /></a>
     </div>
   </div>
