@@ -97,6 +97,7 @@ export class ChartComponent implements OnInit {
           legend: {
             position: "bottom",
             align: "start",
+            onClick: () => {},
             labels: {
               padding: 35,
               boxWidth: 16,
