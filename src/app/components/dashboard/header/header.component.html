@@ -12,7 +12,9 @@
   </div>
 
   <div class="header__addition">
-    <button type="button" class="btn button_link dark d-none d-lg-block" routerLink="/">BACK TO HOME PAGE</button>
+    <button type="button" class="btn button_link dark d-none d-lg-block" [routerLink]="backProps[page].link">
+      {{ backProps[page].title }}
+    </button>
     <button type="button" class="btn button_flat-dark d-none d-lg-block">CONNECT YOUR WALLET</button>
     <button class="button button_flat-dark button_rounded d-lg-none">APP</button>
     <div class="header__burger d-lg-none" (click)="emitBurgerClick()"></div>

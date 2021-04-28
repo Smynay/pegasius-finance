@@ -1,4 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
+
 import { MenuService } from "src/app/services/menu.service";
 
 @Component({
@@ -15,9 +17,24 @@ export class DashboardHeaderComponent implements OnInit {
     { locale: "FR", title: "France" },
   ];
 
+  backProps = {
+    dashboard: {
+      link: "/",
+      title: "BACK TO HOME PAGE",
+    },
+    pool: {
+      link: "/dashboard",
+      title: "BACK TO DASHBOARD",
+    },
+  };
+
+  page: string;
+
   @Output() burgerClick = new EventEmitter();
 
-  constructor(public menuService: MenuService) {}
+  constructor(public menuService: MenuService, private activatedRoute: ActivatedRoute) {
+    this.page = this.activatedRoute.snapshot.routeConfig.path;
+  }
 
   ngOnInit(): void {}
 
