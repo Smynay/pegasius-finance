@@ -5,33 +5,40 @@
       <mat-icon (click)="drawer.close()">close</mat-icon>
     </div>
     <div class="drawer-sidenav__menu">
-      <p class="title light mb-4" *ngFor="let item of menuService.homeMenu" (click)="drawer.close()" [routerLink]="item.path">
+      <p
+        class="title light mb-4"
+        *ngFor="let item of menuService.homeMenu"
+        (click)="drawer.close()"
+        [routerLink]="item.path"
+      >
         {{ item.title }}
       </p>
     </div>
   </mat-drawer>
 
-  <div class="drawer-sidenav-content">
-    <app-header class="w-100" (burgerClick)="drawer.toggle()"></app-header>
-    <main>
-      <div class="gradient">
-        <div class="content">
-          <app-main-section></app-main-section>
-          <app-pools-section></app-pools-section>
-          <app-about-section></app-about-section>
-          <app-features-section></app-features-section>
-          <app-partners-section></app-partners-section>
+  <div class="drawer-sidenav-content d-flex flex-column">
+    <app-header class="header w-100" (burgerClick)="drawer.toggle()"></app-header>
+    <div class="content__box flex-grow-1">
+      <main>
+        <div class="gradient">
+          <div class="content">
+            <app-main-section></app-main-section>
+            <app-pools-section></app-pools-section>
+            <app-about-section></app-about-section>
+            <app-features-section></app-features-section>
+            <app-partners-section></app-partners-section>
+          </div>
+          <div class="decorations">
+            <div class="decore decore_first"></div>
+            <div class="decore decore_second"></div>
+            <div class="decore decore_third"></div>
+            <div class="decore decore_fourth"></div>
+            <div class="decore decore_fifth"></div>
+          </div>
         </div>
-        <div class="decorations">
-          <div class="decore decore_first"></div>
-          <div class="decore decore_second"></div>
-          <div class="decore decore_third"></div>
-          <div class="decore decore_fourth"></div>
-          <div class="decore decore_fifth"></div>
-        </div>
-      </div>
-      <app-blog-section></app-blog-section>
-    </main>
-    <app-footer></app-footer>
+        <app-blog-section></app-blog-section>
+      </main>
+      <app-footer></app-footer>
+    </div>
   </div>
 </mat-drawer-container>
