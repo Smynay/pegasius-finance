@@ -6,7 +6,9 @@
     </div>
   </div>
   <ul class="col-6 px-0 col-lg-4 header__menu d-none d-lg-flex justify-content-center">
-    <li *ngFor="let item of menuService.homeMenu" [routerLink]="item.path">{{ item.title }}</li>
+    <li *ngFor="let item of menuService.homeMenu">
+      <a [href]="item.path">{{ item.title }}</a>
+    </li>
   </ul>
 
   <div class="col-6 px-0 col-lg-4 d-flex justify-content-end">
