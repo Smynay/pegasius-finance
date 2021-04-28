@@ -9,7 +9,8 @@ export class BlogCardComponent implements OnInit {
   @Input() postData = {
     coverImg: "../../../assets/images/content/2.svg",
     coverText: "LIKE ME",
-    title: "BE LIKE BE LIKE BE LIKE BE LIKE BE LIKE",
+    title: "AWESOME TITLE",
+    link: "",
   };
 
   constructor() {}
