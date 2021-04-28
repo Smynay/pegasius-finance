@@ -8,6 +8,12 @@ import { Component, Input, OnInit } from "@angular/core";
 export class FooterComponent implements OnInit {
   @Input() apperance = "blue";
 
+  socialLinks = {
+    facebook: "",
+    instagram: "",
+    twitter: "",
+  };
+
   constructor() {}
 
   ngOnInit(): void {}
