@@ -13,7 +13,10 @@
     }
 
     .block__image {
-      height: 180px;
+      height: 212px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     p {
