@@ -65,6 +65,10 @@ $background: $light;
     display: flex;
     align-items: center;
     gap: 1rem;
+
+    button:focus {
+      box-shadow: none;
+    }
   }
 
   &__burger {
