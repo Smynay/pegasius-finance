@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { NgwWowService } from "ngx-wow";
 
 @Component({
   selector: "app-main-section",
@@ -8,7 +9,9 @@ import { Component, OnInit } from "@angular/core";
 export class MainSectionComponent implements OnInit {
   mainSectionImage = "assets/images/content/1.svg";
 
-  constructor() {}
+  constructor(private wowService: NgwWowService) {
+    this.wowService.init();
+  }
 
   ngOnInit(): void {}
 }

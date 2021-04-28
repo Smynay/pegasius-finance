@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { NgwWowService } from "ngx-wow";
 
 @Component({
   selector: "app-pools-section",
@@ -8,7 +9,9 @@ import { Component, OnInit } from "@angular/core";
 export class PoolsSectionComponent implements OnInit {
   customDecoreImg = "assets/images/decore/3.svg";
 
-  constructor() {}
+  constructor(private wowService: NgwWowService) {
+    this.wowService.init();
+  }
 
   ngOnInit(): void {}
 }

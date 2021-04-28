@@ -3,6 +3,8 @@ import { BrowserModule } from "@angular/platform-browser";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { MaterialModule } from "./modules/material/material.module";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { NgwWowModule } from "ngx-wow";
 
 import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./components/home/header/header.component";
@@ -60,7 +62,7 @@ import { AltcoinsSectionComponent } from "./sections/altcoins-section/altcoins-s
     ActionFormComponent,
     AltcoinsSectionComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, MaterialModule],
+  imports: [BrowserModule, AppRoutingModule, MaterialModule, BrowserAnimationsModule, NgwWowModule],
   providers: [],
   bootstrap: [AppComponent],
 })
