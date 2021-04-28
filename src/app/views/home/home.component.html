@@ -5,13 +5,8 @@
       <mat-icon (click)="drawer.close()">close</mat-icon>
     </div>
     <div class="drawer-sidenav__menu">
-      <p
-        class="title light mb-4"
-        *ngFor="let item of menuService.homeMenu"
-        (click)="drawer.close()"
-        [routerLink]="item.path"
-      >
-        {{ item.title }}
+      <p class="title light mb-4" *ngFor="let item of menuService.homeMenu" (click)="drawer.close()">
+        <a [href]="item.path">{{ item.title }}</a>
       </p>
     </div>
   </mat-drawer>

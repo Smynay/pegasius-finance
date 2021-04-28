@@ -11,6 +11,17 @@
     width: 100%;
     background: $blue;
 
+    &__menu {
+      a {
+        color: inherit;
+        text-decoration: none;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
     .title {
       margin: 0;
     }
