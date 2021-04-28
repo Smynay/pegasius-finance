@@ -16,6 +16,10 @@ export class AltcoinsSectionComponent implements OnInit {
   }
 
   async ngOnInit(): Promise<void> {
-    this.altcoinsInfo = await this.holdingsService.getUserHoldings();
+    const response = await this.holdingsService.getUserHoldings();
+
+    this.altcoinsInfo = response.map((e, index) => ({ ...e, change: index % 2 ? -1.2 : 1.2 }));
+
+    console.log(this.altcoinsInfo);
   }
 }
