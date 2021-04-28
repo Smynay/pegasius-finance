@@ -9,19 +9,22 @@ export class HoldingsService {
   async getUserHoldings() {
     const response = [
       {
-        pool: "ETH",
-        shares: 4.613,
-        sharePrice: 1.05,
+        symbol: "ADA",
+        address: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        percentage: 10.52,
+        userholdings: 12521,
       },
       {
-        pool: "USDC",
-        shares: 616.53,
-        sharePrice: 1.12,
+        symbol: "WBTC",
+        address: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        percentage: 16.47,
+        userholdings: 0.2136734,
       },
       {
-        pool: "Altcoin",
-        shares: 1647.15,
-        sharePrice: 1.64,
+        symbol: "LINK",
+        address: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        percentage: 73.01,
+        userholdings: 152.2315,
       },
     ];
 
