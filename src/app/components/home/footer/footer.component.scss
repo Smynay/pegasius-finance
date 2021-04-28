@@ -19,6 +19,10 @@
     @media screen and (min-width: $md) {
       padding: 0 1rem;
     }
+
+    @media screen and (min-width: $lg) {
+      height: 60px;
+    }
   }
 
   &__element {
