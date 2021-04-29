@@ -1,23 +1,29 @@
 import { Component, Input, OnInit } from "@angular/core";
 
+import { Pool } from "src/app/models/pool";
+
 @Component({
   selector: "app-simple-card",
   templateUrl: "./simple-card.component.html",
   styleUrls: ["./simple-card.component.scss"],
 })
 export class SimpleCardComponent implements OnInit {
-  @Input() poolInfo = { tokenIco: "assets/images/tokens/BTC.svg" };
-  @Input() decoreImg = "../../../assets/images/decore/2.svg";
+  @Input() poolInfo?: Pool;
+  @Input() decoreImg?: string;
 
   imgStyle = {};
 
   tokenIco: string;
 
-  constructor() {
-    this.tokenIco = this.poolInfo?.tokenIco;
-  }
+  constructor() {}
 
   ngOnInit(): void {
+    this.tokenIco = "assets/images/tokens/BTC.svg";
+
+    if (!this.decoreImg) {
+      this.decoreImg = "../../../assets/images/decore/2.svg";
+    }
+
     this.imgStyle = {
       background: `url('../../../${this.decoreImg}') #fff`,
       "background-color": "#fff",
