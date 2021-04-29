@@ -36,16 +36,16 @@
       height: 100%;
 
       .header {
-        position: fixed;
+        position: relative;
         z-index: 100;
       }
 
       .content__box {
-        margin-top: 40px;
-        overflow: auto;
+        overflow-y: auto;
+        overflow-x: hidden;
 
-        @media screen and (min-width: $lg) {
-          margin-top: 64px;
+        main {
+          position: relative;
         }
       }
     }
@@ -129,11 +129,5 @@ main {
     left: 50%;
     margin-left: -600px;
     top: 2220px;
-  }
-}
-
-::ng-deep {
-  .mat-drawer-content {
-    overflow: hidden !important;
   }
 }
