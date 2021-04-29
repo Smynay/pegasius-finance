@@ -4,18 +4,18 @@
       <img [src]="logo" class="logo" alt="Company logo" />
       <img [src]="logoText" class="logo-text d-none d-lg-block" alt="Company logo text" />
     </div>
-    <select class="form-select custom-select form-select-sm ml-4 d-none d-lg-block">
+    <button type="button" class="btn button_link ml-4 dark d-none d-lg-block" [routerLink]="backProps[page].link">
+      {{ backProps[page].title }}
+    </button>
+  </div>
+
+  <div class="header__addition">
+    <select class="form-select custom-select form-select-sm mr-4 d-none d-lg-block header__lang">
       <option *ngFor="let lang of languages; let i = index" [value]="lang.locale" [selected]="i == 0">
         {{ lang.title }}
       </option>
     </select>
-  </div>
-
-  <div class="header__addition">
-    <button type="button" class="btn button_link dark d-none d-lg-block" [routerLink]="backProps[page].link">
-      {{ backProps[page].title }}
-    </button>
-    <button type="button" class="btn button_flat-dark d-none d-lg-block">CONNECT YOUR WALLET</button>
+    <button type="button" class="btn button_flat-dark d-none d-lg-block header__connect">CONNECT YOUR WALLET</button>
     <button class="button button_flat-dark button_rounded d-lg-none">APP</button>
     <div class="header__burger d-lg-none" (click)="emitBurgerClick()"></div>
   </div>

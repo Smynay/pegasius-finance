@@ -32,6 +32,12 @@ $background: $light;
       height: 66%;
     }
   }
+  &__lang {
+    flex: 1;
+  }
+  &__connect {
+    width: 210px;
+  }
 
   img {
     max-height: 100%;
