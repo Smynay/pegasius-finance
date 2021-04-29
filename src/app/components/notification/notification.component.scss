@@ -1,0 +1,48 @@
+@import "src/scss/_variables";
+
+.bg {
+  &-red {
+    background: $red;
+  }
+
+  &-green {
+    background: $green;
+  }
+
+  &-blue {
+    background: $blue;
+  }
+}
+
+.notification {
+  border-radius: 19px;
+  height: 28px;
+  padding: 0px 20px;
+  gap: 1rem;
+  width: 240px;
+
+  @media screen and (min-width: $lg) {
+    height: 56px;
+    width: 340px;
+  }
+
+  &__icon {
+    color: $light;
+  }
+
+  &__text {
+    font-size: 10px;
+    line-height: 24px;
+    padding: 0;
+    margin: 0;
+    color: $light;
+
+    @media screen and (min-width: $lg) {
+      font-size: 14px;
+    }
+  }
+
+  &__close {
+    color: $light;
+  }
+}

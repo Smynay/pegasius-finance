@@ -33,6 +33,7 @@ import { TotalValueSectionComponent } from "./sections/total-value-section/total
 import { PoolsDashboardSectionComponent } from "./sections/pools-dashboard-section/pools-dashboard-section.component";
 import { PoolFormComponent } from "./sections/pool-form/pool-form.component";
 import { AltcoinsSectionComponent } from "./sections/altcoins-section/altcoins-section.component";
+import { NotificationComponent } from './components/notification/notification.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { AltcoinsSectionComponent } from "./sections/altcoins-section/altcoins-s
     PoolFormComponent,
     ActionFormComponent,
     AltcoinsSectionComponent,
+    NotificationComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, MaterialModule, BrowserAnimationsModule, NgwWowModule],
   providers: [],

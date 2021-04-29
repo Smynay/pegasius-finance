@@ -1,0 +1,12 @@
+<div [class]="'notification d-flex align-items-center bg-' + color">
+  <mat-icon class="notification__icon">{{ icon }}</mat-icon>
+  <ng-container *ngIf="notificationParams.link">
+    <a [href]="notificationParams.link" target="_blank" rel="noopener noreferrer" class="flex-grow-1">
+      <p class="notification__text">{{ notificationParams.text }}</p>
+    </a>
+  </ng-container>
+  <ng-container *ngIf="!notificationParams.link">
+    <p class="notification__text flex-grow-1">{{ notificationParams.text }}</p>
+  </ng-container>
+  <mat-icon class="notification__close">close</mat-icon>
+</div>
