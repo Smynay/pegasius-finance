@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-
+import * as AOS from "aos";
 @Component({
   selector: "app-main-section",
   templateUrl: "./main-section.component.html",
