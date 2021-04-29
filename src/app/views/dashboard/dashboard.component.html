@@ -5,7 +5,12 @@
       <mat-icon (click)="drawer.close()">close</mat-icon>
     </div>
     <div class="drawer-sidenav__menu">
-      <p class="title light mb-4" *ngFor="let item of menuService.dashboardMenu" (click)="drawer.close()" [routerLink]="item.path">
+      <p
+        class="title light mb-4"
+        *ngFor="let item of menuService.dashboardMenu"
+        (click)="drawer.close()"
+        [routerLink]="item.path"
+      >
         {{ item.title }}
       </p>
     </div>
@@ -13,20 +18,22 @@
 
   <div class="drawer-sidenav-content d-flex flex-column">
     <app-dashboard-header class="w-100 upper" (burgerClick)="drawer.toggle()"></app-dashboard-header>
-    <main class="flex-grow-1 flex-shrink-1">
-      <div class="content__wrapper overflow-hidden">
-        <div class="content">
-          <app-total-value-section></app-total-value-section>
-          <app-potfolio-section></app-potfolio-section>
-          <app-pools-dashboard-section></app-pools-dashboard-section>
-        </div>
+    <div class="content__box flex-grow-1">
+      <main class="flex-grow-1 flex-shrink-1">
+        <div class="content__wrapper overflow-hidden">
+          <div class="content">
+            <app-total-value-section></app-total-value-section>
+            <app-potfolio-section></app-potfolio-section>
+            <app-pools-dashboard-section></app-pools-dashboard-section>
+          </div>
 
-        <div class="decorations">
-          <div class="decore decore_first"></div>
-          <div class="decore decore_second"></div>
+          <div class="decorations">
+            <div class="decore decore_first"></div>
+            <div class="decore decore_second"></div>
+          </div>
         </div>
-      </div>
-    </main>
-    <app-footer apperance="dark" class="upper"></app-footer>
+      </main>
+      <app-footer apperance="dark" class="upper"></app-footer>
+    </div>
   </div>
 </mat-drawer-container>
