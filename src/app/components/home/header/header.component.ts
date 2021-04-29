@@ -19,4 +19,13 @@ export class HeaderComponent implements OnInit {
   emitBurgerClick() {
     this.burgerClick.emit(null);
   }
+
+  scrollTo($event, href) {
+    $event.preventDefault();
+
+    document.querySelector(href).scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
 }

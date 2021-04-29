@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { NgwWowService } from "ngx-wow";
 
 import { PoolsService } from "src/app/services/api/pools.service";
 
@@ -14,9 +13,7 @@ export class PoolsSectionComponent implements OnInit {
   customDecoreImg = "assets/images/decore/3.svg";
   pools: Pool[];
 
-  constructor(private wowService: NgwWowService, private poolsService: PoolsService) {
-    this.wowService.init();
-  }
+  constructor(private poolsService: PoolsService) {}
 
   async ngOnInit(): Promise<void> {
     this.pools = await this.poolsService.getAll();
