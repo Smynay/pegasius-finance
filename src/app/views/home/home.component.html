@@ -13,7 +13,7 @@
 
   <div class="drawer-sidenav-content d-flex flex-column">
     <app-header class="w-100" (burgerClick)="drawer.toggle()"></app-header>
-    <div class="content__box flex-grow-1">
+    <div (scroll)="refreshAOS()" class="content__box flex-grow-1">
       <main>
         <div class="gradient">
           <div class="content">

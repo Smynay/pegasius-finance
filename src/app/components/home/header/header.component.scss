@@ -58,6 +58,9 @@ $background: #007eaf;
       a {
         color: inherit;
         text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        height: 100%;
       }
 
       &:focus {
