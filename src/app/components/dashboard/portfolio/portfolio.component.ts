@@ -21,12 +21,14 @@ export class PortfolioComponent implements OnInit {
     const generalCount = userBalance.reduce((sum, e) => e.shares + sum, 0);
     const datasetData = userBalance.map((e) => ((e.shares / generalCount) * 100).toFixed(1));
     const fullPrices = userBalance.map((e) => (e.shares * e.sharePrice).toFixed(2));
+    const generalPrice = fullPrices.reduce((sum, e) => sum + +e, 0);
 
     this.userPortfolio = userBalance.map((e, index) => ({
       ...e,
       percentage: datasetData[index],
       fullPrice: fullPrices[index],
       generalCount,
+      generalPrice,
     }));
 
     const chartData = {
