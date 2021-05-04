@@ -3,7 +3,7 @@
     <div class="card__token p-0">
       <div class="token__wrapper token justify-content-end d-md-flex">
         <p class="font-weight-bold dark">WBTC</p>
-        <br class="d-block d-md-none">
+        <br class="d-block d-md-none" />
         <img [src]="tokenIco" alt="Token icon" />
       </div>
     </div>
@@ -15,17 +15,15 @@
         </div>
         <div class="col-8 px-0 d-block d-lg-flex gap">
           <p class="card__text mb-2 m-lg-0 blue">My balance now: <br /><span class="count dark">$300 (42 DAI)</span></p>
-          <p class="card__text blue m-0">
-            TVL: <br /><span class="count dark">$30,000 (20012 DAI)</span>
-          </p>
+          <p class="card__text blue m-0">TVL: <br /><span class="count dark">$30,000 (20012 DAI)</span></p>
         </div>
       </div>
     </div>
   </div>
   <div class="card__body mb-4">
     <div class="body__wrapper padding d-flex flex-column flex-lg-row justify-content-center">
-      <app-action-form title="Deposit"></app-action-form>
-      <app-action-form title="Withdraw"></app-action-form>
+      <app-action-form title="Deposit" [poolInfo]="poolInfo"></app-action-form>
+      <app-action-form title="Withdraw" [poolInfo]="poolInfo"></app-action-form>
     </div>
   </div>
 </div>

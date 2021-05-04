@@ -18,7 +18,7 @@ export class SimpleCardComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.tokenIco = "assets/images/tokens/BTC.svg";
+    this.tokenIco = this.poolInfo.icon || "assets/images/tokens/BTC.svg";
 
     if (!this.decoreImg) {
       this.decoreImg = "../../../assets/images/decore/2.svg";

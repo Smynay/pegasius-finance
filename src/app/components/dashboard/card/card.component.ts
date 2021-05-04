@@ -7,13 +7,13 @@ import { Pool } from "src/app/models/pool";
   styleUrls: ["./card.component.scss"],
 })
 export class CardComponent implements OnInit {
-  @Input() poolInfo: Pool;
+  @Input() poolInfo?: Pool;
 
   tokenIco: string;
 
-  constructor() {
-    this.tokenIco = "assets/images/tokens/BTC.svg";
-  }
+  constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.tokenIco = this.poolInfo.icon || "assets/images/tokens/BTC.svg";
+  }
 }
