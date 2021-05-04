@@ -6,7 +6,7 @@ import * as AOS from "aos";
   styleUrls: ["./main-section.component.scss"],
 })
 export class MainSectionComponent implements OnInit {
-  mainSectionImage = "assets/images/content/1.svg";
+  mainSectionImage = "assets/images/content/1.png";
 
   constructor() {}
 
