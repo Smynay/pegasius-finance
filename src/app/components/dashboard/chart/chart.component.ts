@@ -4,6 +4,7 @@ import { Chart, ChartConfiguration, ChartData, ChartItem, ChartOptions, register
 Chart.register(...registerables);
 
 import { TvlHistoryService } from "src/app/services/api/tvl-history.service";
+import { PoolsService } from "src/app/services/api/pools.service";
 
 @Component({
   selector: "app-chart",
@@ -12,10 +13,13 @@ import { TvlHistoryService } from "src/app/services/api/tvl-history.service";
 })
 export class ChartComponent implements OnInit {
   myChart;
+  tvlToShow = "$52.6B";
 
-  constructor(private tvlHistoryService: TvlHistoryService) {}
+  constructor(private tvlHistoryService: TvlHistoryService, private poolsService: PoolsService) {}
 
   async ngOnInit(): Promise<void> {
+    this.tvlToShow = await this.poolsService.getFormattedTVL();
+
     function getPreparedDataset(dataArray, key) {
       return {
         data: dataArray.map((e) => e.tvl),
