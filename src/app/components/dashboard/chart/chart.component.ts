@@ -1,7 +1,5 @@
-import { FocusTrap } from "@angular/cdk/a11y";
 import { Component, OnInit } from "@angular/core";
-import { Chart, ChartConfiguration, ChartData, ChartItem, ChartOptions, registerables } from "chart.js";
-Chart.register(...registerables);
+import { Chart, ChartConfiguration, ChartItem, registerables } from "chart.js";
 
 import { TvlHistoryService } from "src/app/services/api/tvl-history.service";
 import { PoolsService } from "src/app/services/api/pools.service";
@@ -15,52 +13,53 @@ export class ChartComponent implements OnInit {
   myChart;
   tvlToShow = "$52.6B";
 
-  constructor(private tvlHistoryService: TvlHistoryService, private poolsService: PoolsService) {}
+  constructor(private tvlHistoryService: TvlHistoryService, private poolsService: PoolsService) {
+    Chart.register(...registerables);
+  }
+
+  getFullDateValue(dateNumber) {
+    const temp = dateNumber.toString();
+    return temp.length > 1 ? temp : "0" + temp;
+  }
+
+  getPreparedDataset(dataArray, key) {
+    return {
+      data: dataArray.map((e) => e.tvl),
+      label: key,
+      timestamp: dataArray.map((e) => e.timestamp),
+      clearValue: dataArray.map((e) => e.tvl),
+    };
+  }
+
+  getChartLables(dataArray) {
+    const tempData = dataArray.concat();
+    const output = [];
+
+    tempData.reverse();
+
+    tempData.forEach((e) => {
+      const date = new Date(+(e.timestamp + "000"));
+      const hour = this.getFullDateValue(date.getHours());
+      const datestring = `${hour}:00`;
+
+      output.push(datestring);
+    });
+
+    return output;
+  }
 
   async ngOnInit(): Promise<void> {
     this.tvlToShow = await this.poolsService.getFormattedTVL();
 
-    function getPreparedDataset(dataArray, key) {
-      return {
-        data: dataArray.map((e) => e.tvl),
-        label: key,
-        timestamp: dataArray.map((e) => e.timestamp),
-        clearValue: dataArray.map((e) => e.tvl),
-      };
-    }
-
-    function getChartLables(dataArray) {
-      function getFullDateValue(value) {
-        const temp = value.toString();
-        return temp.length > 1 ? temp : "0" + temp;
-      }
-
-      const output = [];
-
-      dataArray.forEach((e) => {
-        const date = new Date(+(e.timestamp + "000"));
-        const hour = getFullDateValue(date.getHours());
-        const datestring = `${hour}:00`;
-
-        output.push(datestring);
-      });
-
-      return output;
-    }
-
     const chartData = await this.tvlHistoryService.getHistory();
-    let labels;
+    const labels = this.getChartLables(chartData[Object.keys(chartData)[0]]);
 
     const datasets = Object.keys(chartData).map((key) => {
       chartData[key].reverse();
-
-      if (!labels) {
-        labels = getChartLables(chartData[key]);
-      }
-
-      return getPreparedDataset(chartData[key], key);
+      return this.getPreparedDataset(chartData[key], key);
     });
 
+    // DESCRIPTION: sum charts values only for view
     datasets[1].data = datasets[1].data.map((value, index) => value + datasets[0].data[index]);
 
     const config: ChartConfiguration = {
