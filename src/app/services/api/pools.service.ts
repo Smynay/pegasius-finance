@@ -13,7 +13,7 @@ export class PoolsService {
         symbol: "WETH",
         asset: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
         tvl: 786,
-        icon: "link-to-logo",
+        icon: "",
       },
       {
         apy: 37.96,
@@ -21,7 +21,7 @@ export class PoolsService {
         symbol: "USDC",
         asset: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
         tvl: 815000,
-        icon: "link-to-logo",
+        icon: "",
       },
     ],
   };
