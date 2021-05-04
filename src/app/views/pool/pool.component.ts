@@ -1,17 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from "@angular/core";
 
-import { MenuService } from 'src/app/services/menu.service';
+import { MenuService } from "src/app/services/menu.service";
 
 @Component({
-  selector: 'app-pool',
-  templateUrl: './pool.component.html',
-  styleUrls: ['./pool.component.scss']
+  selector: "app-pool",
+  templateUrl: "./pool.component.html",
+  styleUrls: ["./pool.component.scss"],
 })
-export class PoolComponent implements OnInit {
-
+export class PoolComponent implements AfterViewInit {
   constructor(public menuService: MenuService) {}
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
+    document.querySelector("#pool-form").scrollIntoView({
+      block: "start",
+    });
   }
-
 }
