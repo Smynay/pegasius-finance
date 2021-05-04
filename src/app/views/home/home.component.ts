@@ -15,7 +15,6 @@ export class HomeComponent implements OnInit {
   }
 
   refreshAOS() {
-    console.log("refresh");
     AOS.refresh();
   }
 }
