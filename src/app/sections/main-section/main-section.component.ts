@@ -1,5 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import * as AOS from "aos";
+
+import { PoolsService } from "src/app/services/api/pools.service";
+
 @Component({
   selector: "app-main-section",
   templateUrl: "./main-section.component.html",
@@ -7,8 +10,11 @@ import * as AOS from "aos";
 })
 export class MainSectionComponent implements OnInit {
   mainSectionImage = "assets/images/content/1.png";
+  tvlToShow = "$50.7B";
 
-  constructor() {}
+  constructor(private poolsService: PoolsService) {}
 
-  ngOnInit(): void {}
+  async ngOnInit(): Promise<void> {
+    this.tvlToShow = await this.poolsService.getFormattedTVL();
+  }
 }
