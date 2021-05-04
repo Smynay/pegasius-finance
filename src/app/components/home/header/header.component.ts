@@ -7,8 +7,8 @@ import { Component, EventEmitter, OnInit, Output } from "@angular/core";
   styleUrls: ["./header.component.scss"],
 })
 export class HeaderComponent implements OnInit {
-  logo = "assets/images/logo/logo.svg";
-  logoText = "assets/images/logo/logo_text.svg";
+  logo = "assets/images/logo/logo.png";
+  logoText = "assets/images/logo/logo_text.png";
 
   @Output() burgerClick = new EventEmitter();
 

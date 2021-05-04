@@ -9,8 +9,8 @@ import { MenuService } from "src/app/services/menu.service";
   styleUrls: ["./header.component.scss"],
 })
 export class DashboardHeaderComponent implements OnInit {
-  logo = "assets/images/logo/logo.svg";
-  logoText = "assets/images/logo/logo_text-dark.svg";
+  logo = "assets/images/logo/logo.png";
+  logoText = "assets/images/logo/logo_text-dark.png";
 
   languages = [
     { locale: "EN", title: "English" },
