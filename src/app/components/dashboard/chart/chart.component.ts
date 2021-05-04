@@ -113,7 +113,7 @@ export class ChartComponent implements OnInit {
             callbacks: {
               label: (context: any) => {
                 const tokenName = context.dataset.label;
-                const clearValue = context.dataset.clearValue[context.dataIndex];
+                const clearValue = new Intl.NumberFormat("en-US").format(context.dataset.clearValue[context.dataIndex]);
                 return `${tokenName}: ${clearValue}`;
               },
               title: (context: any) => {
