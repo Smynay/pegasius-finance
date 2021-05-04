@@ -13,7 +13,7 @@
       </thead>
       <tbody class="dark">
         <tr *ngFor="let coin of altcoinsInfo">
-          <td><img class="table__ico" [src]="tokenIco" alt="Token icon" /></td>
+          <td><img class="table__ico" [src]="coin.icon || tokenIco" alt="Token icon" /></td>
           <td class="font-weight-bold">{{ coin.symbol }}</td>
           <td>
             $0.75 <span [ngClass]="{ red: coin.change <= 0, green: coin.change > 0 }">({{ coin.change }}%)</span>
