@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from "@angular/core";
 })
 export class BlogCardComponent implements OnInit {
   @Input() postData = {
-    coverImg: "../../../assets/images/content/2.svg",
+    coverImg: "../../../assets/images/content/2.png",
     coverText: "LIKE ME",
     title: "AWESOME TITLE",
     link: "",
