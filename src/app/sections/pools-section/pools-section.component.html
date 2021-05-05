@@ -6,7 +6,9 @@
       *ngFor="let pool of pools; let i = index"
       [poolInfo]="pool"
       [decoreImg]="i % 2 ? customDecoreImg : null"
-      [ngClass]="{ fadeInLeft: !(i % 2), fadeInRight: i % 2 }"
+      [attr.data-aos]="!(i % 2) ? 'fade-right' : 'fade-left'"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000"
     ></app-simple-card>
   </div>
 </section>
