@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   constructor(public menuService: MenuService) {}
 
   ngOnInit() {
-    AOS.init({ scrollContainer: ".content__box" });
+    AOS.init();
   }
 
   refreshAOS() {

@@ -1,5 +1,6 @@
 ::ng-deep {
-  .mat-drawer-content {
+  .mat-drawer-container-has-open {
+    height: 100%;
     overflow: hidden !important;
   }
 }
