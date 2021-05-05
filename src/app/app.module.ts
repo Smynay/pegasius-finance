@@ -4,7 +4,6 @@ import { BrowserModule } from "@angular/platform-browser";
 import { AppRoutingModule } from "./app-routing.module";
 import { MaterialModule } from "./modules/material/material.module";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { NgwWowModule } from "ngx-wow";
 
 import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./components/home/header/header.component";
@@ -18,6 +17,7 @@ import { PotfolioSectionComponent } from "./sections/potfolio-section/potfolio-s
 import { CardComponent } from "./components/dashboard/card/card.component";
 import { PoolCardComponent } from "./components/pool/card/card.component";
 import { ActionFormComponent } from "./components/pool/action-form/action-form.component";
+import { NotificationComponent } from "./components/notification/notification.component";
 
 import { HomeComponent } from "./views/home/home.component";
 import { DashboardComponent } from "./views/dashboard/dashboard.component";
@@ -33,7 +33,6 @@ import { TotalValueSectionComponent } from "./sections/total-value-section/total
 import { PoolsDashboardSectionComponent } from "./sections/pools-dashboard-section/pools-dashboard-section.component";
 import { PoolFormComponent } from "./sections/pool-form/pool-form.component";
 import { AltcoinsSectionComponent } from "./sections/altcoins-section/altcoins-section.component";
-import { NotificationComponent } from './components/notification/notification.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +63,7 @@ import { NotificationComponent } from './components/notification/notification.co
     AltcoinsSectionComponent,
     NotificationComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, MaterialModule, BrowserAnimationsModule, NgwWowModule],
+  imports: [BrowserModule, AppRoutingModule, MaterialModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
