@@ -12,11 +12,6 @@ export class DashboardHeaderComponent implements OnInit {
   logo = "assets/images/logo/logo.png";
   logoText = "assets/images/logo/logo_text-dark.png";
 
-  languages = [
-    { locale: "EN", title: "English" },
-    { locale: "FR", title: "France" },
-  ];
-
   backProps = {
     dashboard: {
       link: "/",

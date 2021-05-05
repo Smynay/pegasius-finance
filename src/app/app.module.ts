@@ -18,6 +18,7 @@ import { CardComponent } from "./components/dashboard/card/card.component";
 import { PoolCardComponent } from "./components/pool/card/card.component";
 import { ActionFormComponent } from "./components/pool/action-form/action-form.component";
 import { NotificationComponent } from "./components/notification/notification.component";
+import { LanguageSelectorComponent } from "./components/language-selector/language-selector.component";
 
 import { HomeComponent } from "./views/home/home.component";
 import { DashboardComponent } from "./views/dashboard/dashboard.component";
@@ -62,6 +63,7 @@ import { AltcoinsSectionComponent } from "./sections/altcoins-section/altcoins-s
     ActionFormComponent,
     AltcoinsSectionComponent,
     NotificationComponent,
+    LanguageSelectorComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, MaterialModule, BrowserAnimationsModule],
   providers: [],
