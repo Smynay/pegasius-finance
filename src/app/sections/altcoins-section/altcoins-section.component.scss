@@ -6,6 +6,7 @@
   }
 
   .table {
+    table-layout: fixed;
 
     &__head {
       vertical-align: middle;
@@ -19,8 +20,8 @@
       }
     }
 
-
-    th, td {
+    th,
+    td {
       padding: 5px;
       vertical-align: middle;
     }
@@ -40,12 +41,28 @@
     }
 
     td {
-      border-bottom: 1px solid #24126A;
+      border-bottom: 1px solid #24126a;
       font-size: 12px;
       line-height: 24px;
 
       @media screen and (min-width: $lg) {
         font-size: 19px;
+      }
+    }
+
+    .icon {
+      width: 20px;
+
+      @media screen and (min-width: $md) {
+        width: 30px;
+      }
+    }
+
+    .symbol {
+      width: 50px;
+
+      @media screen and (min-width: $md) {
+        width: auto;
       }
     }
   }
