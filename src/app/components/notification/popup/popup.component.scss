@@ -1,19 +1,5 @@
 @import "src/scss/_variables";
 
-.bg {
-  &-red {
-    background: $red;
-  }
-
-  &-green {
-    background: $green;
-  }
-
-  &-blue {
-    background: $blue;
-  }
-}
-
 .popup {
   display: flex;
   margin: auto;

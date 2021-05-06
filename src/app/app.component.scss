@@ -14,14 +14,17 @@
   z-index: 100;
   pointer-events: none;
 
-  &__snackbar {
+  &__snackbar,
+  &__popup,
+  &__wallet-connect {
     position: absolute;
-    bottom: 2rem;
-    right: 2rem;
+    height: 100%;
+    width: 100%;
     pointer-events: auto;
   }
 
-  &__popup {
-    pointer-events: auto;
+  &__snackbar {
+    bottom: 2rem;
+    right: 2rem;
   }
 }

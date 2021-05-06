@@ -1,12 +1,14 @@
-<div [class]="'snackbar d-flex align-items-center bg-' + color">
-  <mat-icon class="snackbar__icon">{{ icon }}</mat-icon>
-  <ng-container *ngIf="snackbarParams.link">
-    <a [href]="snackbarParams.link" target="_blank" rel="noopener noreferrer" class="snackbar__link flex-grow-1">
-      <p class="snackbar__text">{{ snackbarParams.text }}</p>
-    </a>
-  </ng-container>
-  <ng-container *ngIf="!snackbarParams.link">
-    <p class="snackbar__text flex-grow-1">{{ snackbarParams.text }}</p>
-  </ng-container>
-  <mat-icon class="snackbar__close" (click)="closeSnackbar()">close</mat-icon>
+<div class="snackbar__wrapper">
+  <div [class]="'snackbar d-flex align-items-center bg-' + color">
+    <mat-icon class="snackbar__icon">{{ icon }}</mat-icon>
+    <ng-container *ngIf="snackbarParams.link">
+      <a [href]="snackbarParams.link" target="_blank" rel="noopener noreferrer" class="snackbar__link flex-grow-1">
+        <p class="snackbar__text">{{ snackbarParams.text }}</p>
+      </a>
+    </ng-container>
+    <ng-container *ngIf="!snackbarParams.link">
+      <p class="snackbar__text flex-grow-1">{{ snackbarParams.text }}</p>
+    </ng-container>
+    <mat-icon class="snackbar__close" (click)="closeSnackbar()">close</mat-icon>
+  </div>
 </div>
