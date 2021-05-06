@@ -37,16 +37,16 @@
   }
 
   .first {
-    @include image("../../../assets/images/content/4.png", left, 50% 100%);
+    @include image("../../../assets/images/content/4.svg", left, 50% 100%);
     background-size: contain;
   }
 
   .second {
-    @include image("../../../assets/images/content/5.png", 108%, auto 90%);
+    @include image("../../../assets/images/content/5.svg", 108%, auto 90%);
 
     @media screen and (min-width: $md) {
       margin-top: -6%;
-      @include image("../../../assets/images/content/5.png", 90%, auto 80%);
+      @include image("../../../assets/images/content/5.svg", 90%, auto 80%);
     }
 
     @media screen and (min-width: $lg) {
@@ -55,7 +55,7 @@
   }
 
   .third {
-    @include image("../../../assets/images/content/6.png", 20%, auto 80%);
+    @include image("../../../assets/images/content/6.svg", 20%, auto 80%);
 
     @media screen and (min-width: $md) {
       margin-top: -10%;
