@@ -10,19 +10,19 @@ export class PartnersSectionComponent implements OnInit {
     {
       name: "haechiAudit",
       darkImg: "../../../assets/images/logo/haechi.svg",
-      lightImg: "../../../assets/images/logo/haechi_light.png",
+      lightImg: "../../../assets/images/logo/haechi_light.svg",
       link: "https://google.com",
     },
     {
       name: "uniswap",
-      darkImg: "../../../assets/images/logo/uniswap_light.svg",
-      lightImg: "../../../assets/images/logo/uniswap_light.png",
+      darkImg: "../../../assets/images/logo/uniswap.svg",
+      lightImg: "../../../assets/images/logo/uniswap_light.svg",
       link: "",
     },
     {
       name: "consensys",
       darkImg: "../../../assets/images/logo/consensys.svg",
-      lightImg: "../../../assets/images/logo/consensys_light.png",
+      lightImg: "../../../assets/images/logo/consensys_light.svg",
       link: "",
     },
   ];
