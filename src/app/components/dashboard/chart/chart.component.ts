@@ -4,6 +4,8 @@ import { Chart, ChartConfiguration, ChartItem, registerables } from "chart.js";
 import { TvlHistoryService } from "src/app/services/api/tvl-history.service";
 import { PoolsService } from "src/app/services/api/pools.service";
 
+import { CHART_COLORS } from "src/environments/chart-colors";
+
 @Component({
   selector: "app-chart",
   templateUrl: "./chart.component.html",
@@ -60,28 +62,27 @@ export class ChartComponent implements OnInit {
     });
 
     // DESCRIPTION: sum charts values only for view
-    datasets[1].data = datasets[1].data.map((value, index) => value + datasets[0].data[index]);
+    if (datasets.length > 1) {
+      datasets.map((dataset, datasetIndex) => {
+        if (datasetIndex > 0) {
+          dataset.data = dataset.data.map((value, index) => value + datasets[datasetIndex - 1].data[index]);
+        }
+
+        return dataset;
+      });
+    }
+
+    const preparedDatasets = datasets.map((dataset, datasetIndex) => {
+      const color = CHART_COLORS[datasetIndex % CHART_COLORS.length];
+
+      return { ...dataset, borderColor: color, backgroundColor: color, tension: 0.4, fill: true };
+    });
 
     const config: ChartConfiguration = {
       type: "line",
       data: {
         labels,
-        datasets: [
-          {
-            ...datasets[0],
-            borderColor: "#007EAF",
-            backgroundColor: "#007EAF",
-            tension: 0.4,
-            fill: true,
-          },
-          {
-            ...datasets[1],
-            borderColor: "#24126A",
-            backgroundColor: "#24126A",
-            tension: 0.4,
-            fill: true,
-          },
-        ],
+        datasets: preparedDatasets,
       },
       options: {
         responsive: true,
