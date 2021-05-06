@@ -108,6 +108,156 @@ export class TvlHistoryService {
           tvl: 815000,
         },
       ],
+      WETH: [
+        {
+          timestamp: 1619388000,
+          tvl: 679000,
+        },
+        {
+          timestamp: 1619344800,
+          tvl: 856000,
+        },
+        {
+          timestamp: 1619301600,
+          tvl: 110002,
+        },
+        {
+          timestamp: 1619258400,
+          tvl: 900100,
+        },
+        {
+          timestamp: 1619215200,
+          tvl: 856422,
+        },
+        {
+          timestamp: 1619344800,
+          tvl: 856422,
+        },
+        {
+          timestamp: 1619172000,
+          tvl: 856422,
+        },
+        {
+          timestamp: 1619128800,
+          tvl: 856422,
+        },
+        {
+          timestamp: 1619085600,
+          tvl: 856422,
+        },
+        {
+          timestamp: 1619042400,
+          tvl: 856422,
+        },
+        {
+          timestamp: 1618999200,
+          tvl: 856422,
+        },
+        {
+          timestamp: 1618956000,
+          tvl: 856422,
+        },
+      ],
+      VITYA: [
+        {
+          timestamp: 1619388000,
+          tvl: 679000,
+        },
+        {
+          timestamp: 1619344800,
+          tvl: 856000,
+        },
+        {
+          timestamp: 1619301600,
+          tvl: 110002,
+        },
+        {
+          timestamp: 1619258400,
+          tvl: 900100,
+        },
+        {
+          timestamp: 1619215200,
+          tvl: 856422,
+        },
+        {
+          timestamp: 1619344800,
+          tvl: 856422,
+        },
+        {
+          timestamp: 1619172000,
+          tvl: 856422,
+        },
+        {
+          timestamp: 1619128800,
+          tvl: 856422,
+        },
+        {
+          timestamp: 1619085600,
+          tvl: 856422,
+        },
+        {
+          timestamp: 1619042400,
+          tvl: 856422,
+        },
+        {
+          timestamp: 1618999200,
+          tvl: 856422,
+        },
+        {
+          timestamp: 1618956000,
+          tvl: 856422,
+        },
+      ],
+      NIKITAS: [
+        {
+          timestamp: 1619388000,
+          tvl: 679000,
+        },
+        {
+          timestamp: 1619344800,
+          tvl: 856000,
+        },
+        {
+          timestamp: 1619301600,
+          tvl: 110002,
+        },
+        {
+          timestamp: 1619258400,
+          tvl: 900100,
+        },
+        {
+          timestamp: 1619215200,
+          tvl: 856422,
+        },
+        {
+          timestamp: 1619344800,
+          tvl: 856422,
+        },
+        {
+          timestamp: 1619172000,
+          tvl: 856422,
+        },
+        {
+          timestamp: 1619128800,
+          tvl: 856422,
+        },
+        {
+          timestamp: 1619085600,
+          tvl: 856422,
+        },
+        {
+          timestamp: 1619042400,
+          tvl: 856422,
+        },
+        {
+          timestamp: 1618999200,
+          tvl: 856422,
+        },
+        {
+          timestamp: 1618956000,
+          tvl: 856422,
+        },
+      ],
     };
 
     return response;
