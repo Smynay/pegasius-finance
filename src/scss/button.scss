@@ -7,10 +7,6 @@
 @mixin flat($bg, $text) {
   color: $text;
   background: $bg;
-
-  &:hover {
-    @include outline($text, $bg);
-  }
 }
 
 .button {
@@ -37,14 +33,26 @@
   &_flat {
     &-dark {
       @include flat($dark, $light);
+
+      &:hover {
+        @include outline($light, $dark);
+      }
     }
 
     &-blue {
       @include flat($blue, $light);
+
+      &:hover {
+        @include outline($light, $blue);
+      }
     }
 
     &-light {
       @include flat($light, $dark);
+
+      &:hover {
+        @include outline($dark, $light);
+      }
     }
   }
 
@@ -57,14 +65,26 @@
   &_outline {
     &-dark {
       @include outline($light, $dark);
+
+      &:hover {
+        @include flat($dark, $light);
+      }
     }
 
     &-blue {
       @include outline($light, $blue);
+
+      &:hover {
+        @include flat($blue, $light);
+      }
     }
 
     &-invert {
       @include outline($dark, $light);
+
+      &:hover {
+        @include flat($light, $dark);
+      }
     }
   }
 }
