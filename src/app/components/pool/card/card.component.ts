@@ -16,11 +16,10 @@ export class PoolCardComponent implements OnInit {
   userProfits: number;
   tokenIco: string;
 
-  constructor(private web3service: Web3Service) {
-    this.tokenIco = this.poolInfo?.icon || "assets/images/tokens/BTC.svg";
-  }
+  constructor(private web3service: Web3Service) {}
 
   async ngOnInit(): Promise<void> {
+    this.tokenIco = this.poolInfo?.icon || "assets/images/tokens/BTC.svg";
     this.userBalance = await this.web3service.getUserBalance();
     this.userProfits = await this.web3service.getUserProfits();
   }
