@@ -9,7 +9,6 @@ import { PoolsService } from "src/app/services/api/pools.service";
   styleUrls: ["./main-section.component.scss"],
 })
 export class MainSectionComponent implements OnInit {
-  mainSectionImage = "assets/images/content/1.png";
   tvlToShow = "$50.7B";
 
   constructor(private poolsService: PoolsService) {}
