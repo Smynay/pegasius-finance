@@ -20,6 +20,7 @@ import { ActionFormComponent } from "./components/pool/action-form/action-form.c
 import { SnackbarComponent } from "./components/notification/snackbar/snackbar.component";
 import { LanguageSelectorComponent } from "./components/language-selector/language-selector.component";
 import { PopupComponent } from "./components/notification/popup/popup.component";
+import { WalletConnectComponent } from "./components/wallet-connect/wallet-connect.component";
 
 import { HomeComponent } from "./views/home/home.component";
 import { DashboardComponent } from "./views/dashboard/dashboard.component";
@@ -66,6 +67,7 @@ import { AltcoinsSectionComponent } from "./sections/altcoins-section/altcoins-s
     LanguageSelectorComponent,
     SnackbarComponent,
     PopupComponent,
+    WalletConnectComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, MaterialModule, BrowserAnimationsModule],
   providers: [],
