@@ -18,8 +18,14 @@
   }
 
   &__field {
-    border-bottom: 1px solid $dark;
+    border-bottom: 1px solid rgba($dark, 0.33);
     gap: 1rem;
+    transition: all 0.5s;
+
+    &:focus-within {
+      transition: all 0.5s;
+      border-bottom: 1px solid $dark;
+    }
 
     .field {
       &__icon {
@@ -33,7 +39,9 @@
         background: transparent;
         border: none;
 
-        &:focus{ outline: none; }
+        &:focus {
+          outline: none;
+        }
       }
     }
   }
@@ -41,4 +49,9 @@
   &__button {
     text-transform: uppercase;
   }
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
