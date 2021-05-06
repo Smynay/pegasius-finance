@@ -1,12 +1,12 @@
 import { Component, Input, OnInit } from "@angular/core";
 
 @Component({
-  selector: "app-notification",
-  templateUrl: "./notification.component.html",
-  styleUrls: ["./notification.component.scss"],
+  selector: "app-snackbar",
+  templateUrl: "./snackbar.component.html",
+  styleUrls: ["./snackbar.component.scss"],
 })
-export class NotificationComponent implements OnInit {
-  @Input() notificationParams = {
+export class SnackbarComponent implements OnInit {
+  @Input() snackbarParams = {
     type: "warning",
     text: "Ahtung!!!",
     link: null,
@@ -16,7 +16,7 @@ export class NotificationComponent implements OnInit {
   color: string;
 
   constructor() {
-    switch (this.notificationParams.type) {
+    switch (this.snackbarParams.type) {
       case "warning":
         this.icon = "warning";
         this.color = "red";
@@ -39,4 +39,6 @@ export class NotificationComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  closeSnackbar() {}
 }

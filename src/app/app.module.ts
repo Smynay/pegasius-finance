@@ -17,8 +17,9 @@ import { PotfolioSectionComponent } from "./sections/potfolio-section/potfolio-s
 import { CardComponent } from "./components/dashboard/card/card.component";
 import { PoolCardComponent } from "./components/pool/card/card.component";
 import { ActionFormComponent } from "./components/pool/action-form/action-form.component";
-import { NotificationComponent } from "./components/notification/notification.component";
+import { SnackbarComponent } from "./components/notification/snackbar/snackbar.component";
 import { LanguageSelectorComponent } from "./components/language-selector/language-selector.component";
+import { PopupComponent } from "./components/notification/popup/popup.component";
 
 import { HomeComponent } from "./views/home/home.component";
 import { DashboardComponent } from "./views/dashboard/dashboard.component";
@@ -62,8 +63,9 @@ import { AltcoinsSectionComponent } from "./sections/altcoins-section/altcoins-s
     PoolFormComponent,
     ActionFormComponent,
     AltcoinsSectionComponent,
-    NotificationComponent,
     LanguageSelectorComponent,
+    SnackbarComponent,
+    PopupComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, MaterialModule, BrowserAnimationsModule],
   providers: [],

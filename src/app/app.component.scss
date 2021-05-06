@@ -4,3 +4,24 @@
     overflow: hidden !important;
   }
 }
+
+.app-modal {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  pointer-events: none;
+
+  &__snackbar {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    pointer-events: auto;
+  }
+
+  &__popup {
+    pointer-events: auto;
+  }
+}

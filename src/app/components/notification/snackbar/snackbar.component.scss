@@ -14,12 +14,14 @@
   }
 }
 
-.notification {
+.snackbar {
   border-radius: 19px;
   height: 28px;
   padding: 0px 20px;
   gap: 1rem;
   width: 240px;
+  cursor: default;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.3));
 
   @media screen and (min-width: $lg) {
     height: 56px;
@@ -28,6 +30,12 @@
 
   &__icon {
     color: $light;
+  }
+
+  &__link {
+    .snackbar__text {
+      cursor: pointer;
+    }
   }
 
   &__text {
@@ -44,5 +52,6 @@
 
   &__close {
     color: $light;
+    cursor: pointer;
   }
 }
