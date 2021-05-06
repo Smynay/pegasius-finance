@@ -27,7 +27,7 @@
 
     &-content {
       .header {
-        position: relative;
+        position: fixed;
         z-index: 100;
       }
 
@@ -36,6 +36,7 @@
         overflow-x: hidden;
 
         main {
+          margin-top: 64px;
           position: relative;
         }
       }
@@ -78,7 +79,7 @@ main {
 
 .decore {
   z-index: 0;
-  opacity: 0.80;
+  opacity: 0.8;
 
   &_first {
     transform: rotate(180deg);
