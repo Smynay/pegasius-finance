@@ -22,7 +22,7 @@
 
     th,
     td {
-      padding: 5px;
+      padding: 10px 2px;
       vertical-align: middle;
     }
 
@@ -32,7 +32,7 @@
       border-left: none;
       font-weight: normal;
       font-size: 10px;
-      line-height: 10px;
+      line-height: 20px;
 
       @media screen and (min-width: $lg) {
         font-size: 14px;
