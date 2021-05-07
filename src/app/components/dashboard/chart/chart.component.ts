@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
 import { Chart, ChartConfiguration, ChartItem, registerables } from "chart.js";
 
 import { TvlHistoryService } from "src/app/services/api/tvl-history.service";
@@ -15,7 +16,11 @@ export class ChartComponent implements OnInit {
   myChart;
   tvlToShow = "$52.6B";
 
-  constructor(private tvlHistoryService: TvlHistoryService, private poolsService: PoolsService) {
+  constructor(
+    private tvlHistoryService: TvlHistoryService,
+    private poolsService: PoolsService,
+    private activatedRoute: ActivatedRoute
+  ) {
     Chart.register(...registerables);
   }
 
@@ -51,9 +56,16 @@ export class ChartComponent implements OnInit {
   }
 
   async ngOnInit(): Promise<void> {
+    let chartData = await this.tvlHistoryService.getHistory();
+    const poolId = this.activatedRoute.snapshot.params?.id;
     this.tvlToShow = await this.poolsService.getFormattedTVL();
 
-    const chartData = await this.tvlHistoryService.getHistory();
+    if (poolId) {
+      const poolToShow = await this.poolsService.getPoolById(+poolId);
+      const temp = await this.tvlHistoryService.getHistoryBySymbol(poolToShow.symbol);
+      chartData = temp as any;
+    }
+
     const labels = this.getChartLables(chartData[Object.keys(chartData)[0]]);
 
     const datasets = Object.keys(chartData).map((key) => {

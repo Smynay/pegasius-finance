@@ -15,5 +15,10 @@
     @media screen and (min-width: $lg) {
       min-height: 260px;
     }
+
+    .content__chart {
+      height: 100%;
+      max-height: 270px;
+    }
   }
 }
