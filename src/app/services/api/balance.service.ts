@@ -18,16 +18,21 @@ export class BalanceService {
         shares: 616.53,
         sharePrice: 1.12,
       },
-      {
-        pool: "WBTC",
-        shares: 245.92,
-        sharePrice: 1.47,
-      },
-      {
-        pool: "DAI",
-        shares: 342.3,
-        sharePrice: 1.01,
-      },
+      // {
+      //   pool: "WBTC",
+      //   shares: 245.92,
+      //   sharePrice: 1.47,
+      // },
+      // {
+      //   pool: "DAI",
+      //   shares: 342.3,
+      //   sharePrice: 1.01,
+      // },
+      // {
+      //   pool: "DAI",
+      //   shares: 342.3,
+      //   sharePrice: 1.01,
+      // },
     ];
 
     return response;
