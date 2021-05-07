@@ -6,8 +6,10 @@
     <p>
       <span class="blue">Locked (USD):</span><br /><span class="count dark">${{ poolInfo.tvl }}</span>
     </p>
-    <button class="button button_flat-blue d-none d-lg-block" routerLink="/pool">VIEW</button>
-    <button class="button button_flat-blue button_rounded d-lg-none d-md-block" routerLink="/pool">VIEW</button>
+    <button class="button button_flat-blue d-none d-lg-block" [routerLink]="'/pool/' + poolInfo.id">VIEW</button>
+    <button class="button button_flat-blue button_rounded d-lg-none d-md-block" [routerLink]="'/pool/' + poolInfo.id">
+      VIEW
+    </button>
   </div>
   <div class="simple-card__token">
     <div class="token">
