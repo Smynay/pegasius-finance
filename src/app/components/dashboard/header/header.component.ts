@@ -28,7 +28,7 @@ export class DashboardHeaderComponent implements OnInit {
   @Output() burgerClick = new EventEmitter();
 
   constructor(public menuService: MenuService, private activatedRoute: ActivatedRoute) {
-    this.page = this.activatedRoute.snapshot.routeConfig.path;
+    this.page = this.activatedRoute.snapshot.routeConfig.path.split("/")[0];
   }
 
   ngOnInit(): void {}
