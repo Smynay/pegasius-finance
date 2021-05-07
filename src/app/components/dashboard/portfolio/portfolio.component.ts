@@ -15,6 +15,8 @@ export class PortfolioComponent implements OnInit {
   userPortfolio?: any = null;
   dataToView: any;
   chartColors = CHART_COLORS;
+  portfolioPartOne: any;
+  portfolioPartTwo: any;
 
   constructor(private balanceService: BalanceService) {
     Chart.register(...registerables);
@@ -35,6 +37,9 @@ export class PortfolioComponent implements OnInit {
       generalCount,
       generalPrice: generalPrice.toFixed(2),
     }));
+
+    this.portfolioPartOne = this.userPortfolio.slice(0, 2);
+    this.portfolioPartTwo = this.userPortfolio.slice(2);
 
     const chartData = {
       labels: userBalance.map((e) => e.pool),
