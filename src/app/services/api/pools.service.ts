@@ -8,6 +8,7 @@ export class PoolsService {
   _serviceData = {
     pools: [
       {
+        id: 0,
         apy: 12.96,
         "apy-30d": 10.5,
         symbol: "WBTC",
@@ -16,6 +17,7 @@ export class PoolsService {
         icon: "assets/images/tokens/WBTC.svg",
       },
       {
+        id: 1,
         apy: 37.96,
         "apy-30d": 40.5,
         symbol: "USDC",
@@ -34,6 +36,10 @@ export class PoolsService {
 
   async getAll() {
     return this._serviceData.pools as Pool[];
+  }
+
+  async getPoolById(id: number) {
+    return this._serviceData.pools.find((pool) => pool.id === id) as Pool;
   }
 
   async getTVL() {
