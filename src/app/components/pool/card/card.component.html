@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" *ngIf="poolInfo">
   <div class="card__header padding">
     <div class="card__token p-0">
       <div class="token__wrapper token justify-content-end d-md-flex">
@@ -22,7 +22,7 @@
             My balance now: <br /><span class="count dark">$300 ({{ userBalance }} {{ poolInfo.symbol }})</span>
           </p>
           <p class="card__text blue m-0">
-            Profits of user : <br /><span class="count dark">$30,000 ({{ userProfits }} {{ poolInfo.symbol }})</span>
+            Profits of user: <br /><span class="count dark">$30,000 ({{ userProfits }} {{ poolInfo.symbol }})</span>
           </p>
         </div>
       </div>

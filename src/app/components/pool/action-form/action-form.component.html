@@ -1,13 +1,12 @@
 <div class="form">
   <h3 class="form__title title_dashboard dark mt-2">{{ title }}:</h3>
-  <hr class="form__divider bg-dark mb-4">
+  <hr class="form__divider bg-dark mb-4" />
   <label class="form__label mb-2 dark">Amount</label>
   <div class="form__field d-flex align-items-center mb-2">
     <img class="field__icon" [src]="tokenIco" alt="Token icon" />
-    <input class="field__input flex-grow-1 dark" type="number">
-    <div class="field__token dark font-weight-bold">WBTC</div>
+    <input class="field__input flex-grow-1 dark" type="number" />
+    <div class="field__token dark font-weight-bold">{{ poolInfo.symbol }}</div>
   </div>
 
   <button class="form__button button button_rounded button_flat-dark d-block w-100">{{ title }}</button>
 </div>
-
