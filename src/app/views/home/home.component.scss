@@ -36,8 +36,12 @@
         overflow-x: hidden;
 
         main {
-          margin-top: 64px;
+          margin-top: 40px;
           position: relative;
+
+          @media screen and (min-width: $lg) {
+            margin-top: 64px;
+          }
         }
       }
     }
