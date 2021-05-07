@@ -112,6 +112,11 @@ export class ChartComponent implements OnInit {
           mode: "index",
           intersect: false,
         },
+        scales: {
+          y: {
+            grace: 30,
+          },
+        },
         plugins: {
           legend: {
             position: "bottom",
