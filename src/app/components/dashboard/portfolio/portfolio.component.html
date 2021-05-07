@@ -8,19 +8,19 @@
     <div class="col-12 col-md-8">
       <div class="portfolio__devider row" *ngIf="userPortfolio">
         <div class="col-12 col-lg-7">
-          <div class="portfolio__panel panel panel_blue">
-            <span>{{ userPortfolio[0].pool }}</span>
-            <span>{{ userPortfolio[0].percentage }}% (${{ userPortfolio[0].fullPrice }})</span>
-          </div>
-          <div class="portfolio__panel panel panel_dark">
-            <span>{{ userPortfolio[1].pool }}</span>
-            <span>{{ userPortfolio[1].percentage }}% (${{ userPortfolio[1].fullPrice }})</span>
+          <div
+            class="portfolio__panel panel light"
+            *ngFor="let element of userPortfolio; let i = index"
+            [style.background]="chartColors[i % chartColors.length]"
+          >
+            <span>{{ element.pool }}</span>
+            <span>{{ element.percentage }}% (${{ element.fullPrice }})</span>
           </div>
         </div>
         <div class="col-12 col-lg-5">
           <div class="portfolio__panel special panel d-lg-flex flex-lg-column align-items-center m-0">
             <span>TOTAL AMOUNT</span>
-            <hr class="d-none d-lg-block" />
+            <hr class="d-none d-lg-block m-0" />
             <span>{{ 100 }}% (${{ +userPortfolio[0].generalPrice }})</span>
           </div>
         </div>

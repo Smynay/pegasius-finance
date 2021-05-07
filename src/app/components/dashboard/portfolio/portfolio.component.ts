@@ -1,7 +1,9 @@
-import { BalanceService } from "./../../../services/api/balance.service";
 import { Component, OnInit } from "@angular/core";
-import { Chart, ChartConfiguration, ChartItem, registerables } from "chart.js";
-Chart.register(...registerables);
+import { Chart, ChartItem, registerables } from "chart.js";
+
+import { BalanceService } from "src/app/services/api/balance.service";
+
+import { CHART_COLORS } from "src/environments/chart-colors";
 
 @Component({
   selector: "app-portfolio",
@@ -12,8 +14,11 @@ export class PortfolioComponent implements OnInit {
   myChart;
   userPortfolio?: any = null;
   dataToView: any;
+  chartColors = CHART_COLORS;
 
-  constructor(private balanceService: BalanceService) {}
+  constructor(private balanceService: BalanceService) {
+    Chart.register(...registerables);
+  }
 
   async ngOnInit(): Promise<void> {
     const userBalance = await this.balanceService.getAll();
@@ -28,7 +33,7 @@ export class PortfolioComponent implements OnInit {
       percentage: datasetData[index],
       fullPrice: fullPrices[index],
       generalCount,
-      generalPrice,
+      generalPrice: generalPrice.toFixed(2),
     }));
 
     const chartData = {
@@ -37,7 +42,7 @@ export class PortfolioComponent implements OnInit {
         {
           label: "Dataset 1",
           data: datasetData,
-          backgroundColor: ["#007EAF", "#24126A"],
+          backgroundColor: this.chartColors,
           tension: 0.4,
         },
       ],
