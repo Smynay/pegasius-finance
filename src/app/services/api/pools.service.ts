@@ -46,8 +46,19 @@ export class PoolsService {
     return this._serviceData.pools.reduce((acc, pool) => acc + pool.tvl, 0);
   }
 
-  async getFormattedTVL(): Promise<string> {
-    const response = await this.getTVL();
+  async getTVLById(poolId: number) {
+    return this._serviceData.pools[poolId].tvl;
+  }
+
+  async getFormattedTVL(poolId?: number): Promise<string> {
+    let response;
+
+    if (poolId != null) {
+      response = await this.getTVLById(poolId);
+    } else {
+      response = await this.getTVL();
+    }
+
     let newTVL = "$";
 
     if (response / this.billion > 0.1) {

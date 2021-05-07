@@ -56,14 +56,17 @@ export class ChartComponent implements OnInit {
   }
 
   async ngOnInit(): Promise<void> {
-    let chartData = await this.tvlHistoryService.getHistory();
+    let chartData;
     const poolId = this.activatedRoute.snapshot.params?.id;
-    this.tvlToShow = await this.poolsService.getFormattedTVL();
 
     if (poolId) {
       const poolToShow = await this.poolsService.getPoolById(+poolId);
       const temp = await this.tvlHistoryService.getHistoryBySymbol(poolToShow.symbol);
       chartData = temp as any;
+      this.tvlToShow = await this.poolsService.getFormattedTVL(poolToShow.id);
+    } else {
+      chartData = await this.tvlHistoryService.getHistory();
+      this.tvlToShow = await this.poolsService.getFormattedTVL();
     }
 
     const labels = this.getChartLables(chartData[Object.keys(chartData)[0]]);
