@@ -72,7 +72,7 @@ export class ChartComponent implements OnInit {
     const labels = this.getChartLables(chartData[Object.keys(chartData)[0]]);
 
     const datasets = Object.keys(chartData).map((key) => {
-      chartData[key].reverse();
+      chartData[key].sort((a, b) => a.timestamp - b.timestamp);
       return this.getPreparedDataset(chartData[key], key);
     });
 
