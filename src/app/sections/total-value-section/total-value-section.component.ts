@@ -1,4 +1,9 @@
 import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
+
+import { PoolsService } from "src/app/services/api/pools.service";
+
+import { Pool } from "src/app/models/pool";
 
 @Component({
   selector: "app-total-value-section",
@@ -6,7 +11,14 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./total-value-section.component.scss"],
 })
 export class TotalValueSectionComponent implements OnInit {
-  constructor() {}
+  poolSymbol = "";
 
-  ngOnInit(): void {}
+  constructor(private activatedRoute: ActivatedRoute, private poolsService: PoolsService) {}
+
+  async ngOnInit(): Promise<void> {
+    const poolId = this.activatedRoute.snapshot.params?.id;
+    const response = await this.poolsService.getPoolById(+poolId);
+
+    this.poolSymbol = response.symbol;
+  }
 }
