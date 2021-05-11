@@ -17,8 +17,11 @@ export class TotalValueSectionComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     const poolId = this.activatedRoute.snapshot.params?.id;
-    const response = await this.poolsService.getPoolById(+poolId);
 
-    this.poolSymbol = response.symbol;
+    if (poolId) {
+      const response = await this.poolsService.getPoolById(+poolId);
+
+      this.poolSymbol = response.symbol;
+    }
   }
 }
