@@ -9,14 +9,20 @@ import { Pool } from "src/app/models/pool";
 })
 export class ActionFormComponent implements OnInit {
   @Input() title = "Deposit";
+  @Input() userBalance = 0;
 
   @Input() poolInfo?: Pool;
 
   tokenIco: string;
+  amount = "";
 
   constructor() {}
 
   ngOnInit(): void {
     this.tokenIco = this.poolInfo?.icon || "assets/images/tokens/BTC.svg";
+  }
+
+  setMaxValue() {
+    this.amount = this.userBalance.toString();
   }
 }

@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
+import { FormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { MaterialModule } from "./modules/material/material.module";
@@ -69,7 +70,7 @@ import { AltcoinsSectionComponent } from "./sections/altcoins-section/altcoins-s
     PopupComponent,
     WalletConnectComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, MaterialModule, BrowserAnimationsModule],
+  imports: [BrowserModule, AppRoutingModule, MaterialModule, BrowserAnimationsModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

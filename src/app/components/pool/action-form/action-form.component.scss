@@ -46,6 +46,15 @@
     }
   }
 
+  &__button-max {
+    color: rgba($dark, 0.4);
+    cursor: pointer;
+
+    &:hover {
+      color: $dark;
+    }
+  }
+
   &__button {
     text-transform: uppercase;
   }
