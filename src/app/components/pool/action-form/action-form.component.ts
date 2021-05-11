@@ -9,7 +9,7 @@ import { Pool } from "src/app/models/pool";
 })
 export class ActionFormComponent implements OnInit {
   @Input() title = "Deposit";
-  @Input() userBalance = 0;
+  @Input() userAmount = 0;
 
   @Input() poolInfo?: Pool;
 
@@ -23,6 +23,6 @@ export class ActionFormComponent implements OnInit {
   }
 
   setMaxValue() {
-    this.amount = this.userBalance.toString();
+    this.amount = this.userAmount.toString();
   }
 }
