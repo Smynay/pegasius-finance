@@ -2,6 +2,7 @@ import { Component, EventEmitter, OnInit, Output } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 
 import { MenuService } from "src/app/services/menu.service";
+import { ModalService } from "src/app/services/modal.service";
 
 @Component({
   selector: "app-dashboard-header",
@@ -27,7 +28,11 @@ export class DashboardHeaderComponent implements OnInit {
 
   @Output() burgerClick = new EventEmitter();
 
-  constructor(public menuService: MenuService, private activatedRoute: ActivatedRoute) {
+  constructor(
+    public menuService: MenuService,
+    private activatedRoute: ActivatedRoute,
+    public modalService: ModalService
+  ) {
     this.page = this.activatedRoute.snapshot.routeConfig.path.split("/")[0];
   }
 
