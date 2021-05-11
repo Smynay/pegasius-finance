@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from "@angular/core";
+import { IModal } from "src/app/models/common";
+import { ModalService } from "src/app/services/modal.service";
 
 @Component({
   selector: "app-popup",
@@ -6,37 +8,31 @@ import { Component, Input, OnInit } from "@angular/core";
   styleUrls: ["./popup.component.scss"],
 })
 export class PopupComponent implements OnInit {
-  @Input() popupParams = {
-    type: "info",
-    text: "Ahtung!!!",
-    link: null,
-  };
-
   icon: string;
   color: string;
   infoMessage: string;
 
-  constructor() {
-    switch (this.popupParams.type) {
+  constructor(public modalService: ModalService) {
+    switch (this.modalService.popupPreset.type) {
       case "warning":
         this.icon = "error";
         this.color = "red";
         this.infoMessage = "TRANSACTION WAS REJECTED";
-        this.popupParams.text = "";
+        this.modalService.popupPreset.text = "";
         break;
 
       case "success":
         this.icon = "check_circle";
         this.color = "green";
         this.infoMessage = "TRANSACTION CONFIRMED";
-        this.popupParams.text = "Transaction succesfuly confirmed!";
+        this.modalService.popupPreset.text = "Transaction succesfuly confirmed!";
         break;
 
       case "info":
         this.icon = "update";
         this.color = "blue";
         this.infoMessage = "WAITING FOR CONFIRMATION";
-        this.popupParams.text = "Please confirm the popped up transaction...";
+        this.modalService.popupPreset.text = "Please confirm the popped up transaction...";
         break;
 
       default:
@@ -47,6 +43,4 @@ export class PopupComponent implements OnInit {
   }
 
   ngOnInit(): void {}
-
-  closeModal() {}
 }

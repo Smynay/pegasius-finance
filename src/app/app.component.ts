@@ -1,4 +1,7 @@
 import { Component, OnInit } from "@angular/core";
+
+import { ModalService } from "./services/modal.service";
+
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
@@ -6,5 +9,8 @@ import { Component, OnInit } from "@angular/core";
 })
 export class AppComponent implements OnInit {
   title = "pegasus-finance";
+
+  constructor(public modalService: ModalService) {}
+
   ngOnInit() {}
 }

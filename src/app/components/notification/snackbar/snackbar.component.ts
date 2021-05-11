@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from "@angular/core";
+import { ModalService } from "src/app/services/modal.service";
 
 @Component({
   selector: "app-snackbar",
@@ -6,30 +7,27 @@ import { Component, Input, OnInit } from "@angular/core";
   styleUrls: ["./snackbar.component.scss"],
 })
 export class SnackbarComponent implements OnInit {
-  @Input() snackbarParams = {
-    type: "warning",
-    text: "Ahtung!!!",
-    link: null,
-  };
-
   icon: string;
   color: string;
 
-  constructor() {
-    switch (this.snackbarParams.type) {
+  constructor(public modalService: ModalService) {
+    switch (this.modalService.snackbarPreset.type) {
       case "warning":
         this.icon = "warning";
         this.color = "red";
+        this.modalService.snackbarPreset.text = "Transaction was Rejected";
         break;
 
       case "success":
         this.icon = "check_circle";
         this.color = "green";
+        this.modalService.snackbarPreset.text = "Transaction successfuly confirmed!";
         break;
 
       case "info":
         this.icon = "update";
         this.color = "blue";
+        this.modalService.snackbarPreset.text = "The transaction in being confirmed...";
         break;
 
       default:
@@ -39,6 +37,4 @@ export class SnackbarComponent implements OnInit {
   }
 
   ngOnInit(): void {}
-
-  closeSnackbar() {}
 }

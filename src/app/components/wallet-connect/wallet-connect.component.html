@@ -1,6 +1,7 @@
-<div class="popup-wallet__wrapper d-flex flex-column" (click)="closeModal()">
+<div class="popup-wallet__wrapper d-flex flex-column">
+  <div class="popup-wallet__backdrop" (click)="modalService.closeModals()"></div>
   <div class="popup-wallet">
-    <div class="popup-wallet__close" (click)="closeModal()">
+    <div class="popup-wallet__close" (click)="modalService.closeModals()">
       <img src="../../../../assets/images/ui/shape.svg" alt="" />
     </div>
 
